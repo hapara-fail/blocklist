@@ -1,0 +1,53 @@
+# Hapara
+*.hapara.com
+*.haparaview.appspot.com
+*.teacherdashboard.com
+*.td-admin.appspot.com
+*.td-setup.appspot.com
+*.d27xxe7juh1us6.cloudfront.net
+
+# Linewize / Qoria / FamilyZone / Sphirewall
+# Note: *.qoria.cloud and *.qoriaapis.cloud are also used by Classwize/Monitor
+# Note: *.linewize.io is also used by Pulse
+*.block.tools
+*.familyzone.com
+*.familyzone.com.au
+*.familyzone.io
+*.familyzone.tools
+*.fzbox.tools
+*.home.tools
+*.linewize.com
+*.linewize.io
+*.linewize.net
+*.linewizereseller.net
+*.qoria.cloud
+*.qoria.com
+*.qoriaapis.cloud
+*.sphirewall.net
+
+# Smoothwall
+# Note: *.smoothwall.cloud is also used by Linewize Image Blurring, Monitor, Pulse
+*.smoothwall.cloud
+*.smoothwall.com
+
+# Classwize (and related services: Ably, Xirsys, Stream)
+*.ably-realtime.com
+*.ably.io
+*.getstream.io
+*.stream-io-api.com
+*.stream-io-cdn.com
+*.stream-io-video.com
+*.xirsys.com
+
+# Gaggle
+*.gaggle.net
+*.gaggle.services
+
+# Blackboard / Anthology
+*.anthology.com
+*.blackboard.com
+
+# Pulse (and related services: EducatorImpact, Zendesk)
+*.educatorimpact.com
+*.zdassets.com
+eipulse.zendesk.com
