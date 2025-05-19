@@ -33,7 +33,7 @@ This list currently includes domains related to the following services (among ot
 
 ## How to Use
 
-1.  **Obtain the Raw List:** You can typically use the raw link to the blocklist file in this repository.
+1.  **Obtain the Raw List:** You can find this [here](https://raw.githubusercontent.com/hapara-fail/blocklist/refs/heads/main/blocklist.txt).
 2.  **Add to Your DNS Filter:**
     * **NextDNS:** Add the URLs to your "Denylist."
     * **Pi-hole:** Add the URL to your "Adlists" under "Group Management."
