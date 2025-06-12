@@ -8,6 +8,7 @@
 # https://support.goguardian.com/s/article/Firewalls-and-Additional-Content-Filters-1629773192030
 # https://helpdesk.lanschoolair.com/portal/en/kb/articles/lanschool-air-system-requirements
 # https://help.lightspeedsystems.com/s/article/Lightspeed-Systems-Prerequisites?language=en_US
+# https://support.deledao.com/support/solutions/articles/66000416164-how-to-deploy-to-chromebooks
 
 # Hapara
 *.hapara.com
@@ -109,6 +110,7 @@
 
 # Deledao
 *.deledao.com
+*.deledao.net
 *.dldschool.org
 *.apisanta.com
 
