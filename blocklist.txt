@@ -1,4 +1,4 @@
-# hapara.fail Official Blocklist
+# hapara.fail Official Blocklist - Wildcard
 # Visit https://hapara.fail/bypass for more information
 
 # Sources: 
