@@ -1,0 +1,162 @@
+# hapara.fail Official Blocklist - RegEx/PiHole
+# Visit https://hapara.fail/bypass for more information
+
+# Sources:
+# https://git.omada.cafe/omada/config/raw/branch/main/dns/webfilters.txt
+# https://support.hapara.com/hc/en-us/articles/205005057-Allowing-H%C4%81para-URLs-in-your-school-network
+# https://help.linewize.com/hc/en-gb/articles/5768594571548-Domains-to-allow-on-your-school-s-firewall
+# https://support.goguardian.com/s/article/Firewalls-and-Additional-Content-Filters-1629773192030
+# https://helpdesk.lanschoolair.com/portal/en/kb/articles/lanschool-air-system-requirements
+# https://help.lightspeedsystems.com/s/article/Lightspeed-Systems-Prerequisites?language=en_US
+# https://support.deledao.com/support/solutions/articles/66000416164-how-to-deploy-to-chromebooks
+
+# Hapara
+(\.|^)hapara\.com$
+(\.|^)haparaview\.appspot\.com$
+(\.|^)teacherdashboard\.com$
+(\.|^)td-admin\.appspot\.com$
+(\.|^)td-setup\.appspot\.com$
+(\.|^)d27xxe7juh1us6\.cloudfront\.net$
+
+# Linewize / Qoria / FamilyZone / Sphirewall
+# Note: *.qoria.cloud and *.qoriaapis.cloud are also used by Classwize/Monitor
+# Note: *.linewize.io is also used by Pulse
+(\.|^)block\.tools$
+(\.|^)familyzone\.com$
+(\.|^)familyzone\.com\.au$
+(\.|^)familyzone\.io$
+(\.|^)familyzone\.tools$
+(\.|^)fzbox\.tools$
+(\.|^)home\.tools$
+(\.|^)linewize\.com$
+(\.|^)linewize\.io$
+(\.|^)linewize\.net$
+(\.|^)linewizereseller\.net$
+(\.|^)qoria\.cloud$
+(\.|^)qoria\.com$
+(\.|^)qoriaapis\.cloud$
+(\.|^)sphirewall\.net$
+(\.|^)qustodio\.com$
+
+# Smoothwall
+# Note: *.smoothwall.cloud is also used by Linewize Image Blurring, Monitor, Pulse
+(\.|^)smoothwall\.cloud$
+(\.|^)smoothwall\.com$
+
+# Gaggle
+(\.|^)gaggle\.net$
+(\.|^)gaggle\.services$
+
+# Blackboard / Anthology
+(\.|^)anthology\.com$
+(\.|^)blackboard\.com$
+
+# Pulse (and related services: EducatorImpact)
+(\.|^)educatorimpact\.com$
+(\.|^)eipulse\.zendesk\.com$
+
+# GoGuardian
+(\.|^)goguardian\.com$
+(\.|^)laptoplookout\.com$
+(\.|^)kinesis\.us-west-2\.amazonaws\.com$
+(\.|^)hosted-extensions\.s3\.us-west-2\.amazonaws\.com$
+(\.|^)x3-report-uploads\.s3\.us-west-2\.amazonaws\.com$
+(\.|^)beacon-report-uploads-prod\.s3\.us-west-2\.amazonaws\.com$
+
+# Securly
+(\.|^)securly\.com$
+(\.|^)tabpilot\.com$
+(\.|^)uswest-www-alb-1430906465\.us-west-1\.elb\.amazonaws\.com$
+
+# LanSchool (All Regions)
+(\.|^)lanschool\.com$
+(\.|^)lanschoolair\.com$
+(\.|^)lenovosoftware\.com$
+(\.|^)lsair\.app$
+
+# Lightspeed Systems
+(\.|^)lightspeedsystems\.com$
+(\.|^)lsmdm\.com$
+(\.|^)lsaccess\.me$
+(\.|^)lsfilter\.com$
+(\.|^)relay\.school$
+(\.|^)lightspeedsystems\.app$
+(\.|^)l5c\.io$
+(\.|^)lsaccess\.com$
+(\.|^)lsurl\.me$
+(\.|^)lsclassroom\.com$
+(\.|^)lsrelayaccess\.com$
+(\.|^)devices\.lsmdm\.com$
+(\.|^)lsagent\.fcps\.org$
+(\.|^)lightspeed-apps\.s3\.amazonaws\.com$
+(\.|^)s3-website\.us-west-2\.amazonaws\.com$
+(\.|^)lsrelay-config-production\.s3\.amazonaws\.com$
+(\.|^)lsrelay-extensions-production\.s3\.amazonaws\.com$
+(\.|^)b16rt683ll\.execute-api\.us-west-2\.amazonaws\.com$
+(\.|^)p7nvu5it0k\.execute-api\.us-west-2\.amazonaws\.com$
+(\.|^)5rw61tcrl5\.execute-api\.us-west-2\.amazonaws\.com$
+(\.|^)sqs\.us-west-2\.amazonaws\.com$
+(\.|^)firehose\.us-west-2\.amazonaws\.com$
+(\.|^)us-west-2\.elb\.amazonaws\.com$
+(\.|^)relay-production-sockets-alb-1210277364\.us-west-2\.elb\.amazonaws\.com$
+(\.|^)apiproxy-website-nlb-prod-3-ac110f6ae472b85a\.elb\.eu-west-1\.amazonaws\.com$
+(\.|^)lightspeed-realtime\.ably\.io$
+(\.|^)a-fallback-lightspeed\.ably\.io$
+(\.|^)b-fallback-lightspeed\.ably\.io$
+(\.|^)c-fallback-lightspeed\.ably\.io$
+(\.|^)global\.stun\.twillo\.com$
+(\.|^)global\.turn\.twillo\.com$
+
+# Deledao
+(\.|^)deledao\.com$
+(\.|^)deledao\.net$
+(\.|^)dldschool\.org$
+(\.|^)apisanta\.com$
+
+# Bark
+(\.|^)bark\.us$
+(\.|^)barkforschools\.com$
+(\.|^)bark\.app$
+
+# LFGL / Senso
+(\.|^)lgfl\.net$
+(\.|^)safehomeschool\.net$
+(\.|^)netsweeper\.com$
+(\.|^)senso\.cloud$
+(\.|^)sensoeugeneral\.blob\.core\.windows\.net$
+(\.|^)sensoeustorage\.blob\.core\.windows\.net$
+(\.|^)sensologarchivestorage\.blob\.core\.windows\.net$
+
+# DyKnow
+(\.|^)dyknow\.com$
+
+# Fortinet / FortiGuard
+(\.|^)fortiguard\.com$
+(\.|^)fortinet\.com$
+(\.|^)forticlient\.com$
+
+# Gopher
+(\.|^)gopherforchrome\.app$
+(\.|^)amplifiedit\.com$
+(\.|^)gopher-buddy-prod\.appspot\.com$
+
+# Content Keeper
+(\.|^)contentkeeper\.com$
+(\.|^)contentkeeper\.io$
+(\.|^)contentkeeper\.net$
+(\.|^)fastvue\.co$
+(\.|^)ativion\.com$
+
+# Iboss
+(\.|^)iboss\.com$
+(\.|^)ibosscloud\.com$
+(\.|^)iboss\.si$
+
+# Blocksi
+(\.|^)blocksi\.net$
+(\.|^)block\.si$
+
+# Others (Not a filtering domain in itself, but a common dependency)
+(\.|^)ably\.io$
+(\.|^)pusher\.com$
+(\.|^)pusherapp\.com$
