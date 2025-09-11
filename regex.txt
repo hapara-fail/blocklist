@@ -154,6 +154,7 @@
 
 # Blocksi
 (\.|^)blocksi\.net$
+(\.|^)blocksicloud\.net$
 (\.|^)block\.si$
 
 # Others (Not a filtering domain in itself, but a common dependency)
