@@ -2,7 +2,7 @@
 ! Title: hapara.fail Blocklist
 ! Description: Blocks school-mandated surveillance software, spyware, and other invasive educational technology services.
 ! Homepage: https://hapara.fail/
-! License: https://licence.hapara.fail/
+! License: https://license.hapara.fail/
 ! Issues: https://github.com/hapara-fail/blocklist/issues
 ! Expires: 3 days
 ! Last modified: 16 Sep 2025 22:11 UTC
