@@ -16,7 +16,6 @@
 *.teacherdashboard.com
 *.td-admin.appspot.com
 *.td-setup.appspot.com
-*.d27xxe7juh1us6.cloudfront.net
 
 # Linewize / Qoria / FamilyZone / Sphirewall
 # Note: *.qoria.cloud and *.qoriaapis.cloud are also used by Classwize/Monitor
