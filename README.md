@@ -1,4 +1,4 @@
-# hapara.fail DNS Blocklist
+# hapara.fail Blocklist
 
 **A DNS blocklist for neutralizing surveillance and content filtering systems in managed network environments.**
 
@@ -68,7 +68,7 @@ Integration of the blocklist is a straightforward process for supported software
 
 1.  **Copy the Raw Blocklist URL:**
     > ```
-    > [https://raw.githubusercontent.com/hapara-fail/blocklist/main/blocklist.txt](https://raw.githubusercontent.com/hapara-fail/blocklist/main/blocklist.txt)
+    > https://raw.githubusercontent.com/hapara-fail/blocklist/main/blocklist.txt
     > ```
 
 2.  **Add the URL to your DNS Filtering Solution:**
