@@ -8,7 +8,7 @@
 ! Last modified: 28 Dec 2025 18:25 UTC
 ! Version: 2025.1228.1825.02
 ! Syntax: Adblock Plus
-! Number of entries: 134
+! Number of entries: 135
 !
 
 ! Hapara
