@@ -154,6 +154,17 @@
 ||blocksicloud.net^
 ||block.si^
 
+! Sophos
+||sophos.com^
+
+! Zscaler
+||zscalerone.net^
+||zscaler.com^
+
+! General Parental Control
+||kiddoware.com^
+||mobileguardian.com^
+
 ! Others (Common Dependencies)
 ||ably.io^
 ||pusher.com^
