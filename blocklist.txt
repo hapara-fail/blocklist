@@ -1,14 +1,14 @@
 [Adblock Plus]
 ! Title: hapara.fail Blocklist
 ! Description: Blocks school-mandated surveillance software, spyware, and other invasive educational technology services.
-! Homepage: https://hapara.fail/
+! Homepage: https://www.hapara.fail/
 ! License: https://license.hapara.fail/
 ! Issues: https://github.com/hapara-fail/blocklist/issues
 ! Expires: 3 days
-! Last modified: 16 Sep 2025 22:11 UTC
-! Version: 2025.0916.2211.38
-! Syntax: AdBlock
-! Number of entries: 110
+! Last modified: 28 Dec 2025 18:25 UTC
+! Version: 2025.1228.1825.02
+! Syntax: Adblock Plus
+! Number of entries: 134
 !
 
 ! Hapara
@@ -55,15 +55,14 @@
 ! GoGuardian
 ||goguardian.com^
 ||laptoplookout.com^
-||kinesis.us-west-2.amazonaws.com^
 ||hosted-extensions.s3.us-west-2.amazonaws.com^
 ||x3-report-uploads.s3.us-west-2.amazonaws.com^
 ||beacon-report-uploads-prod.s3.us-west-2.amazonaws.com^
 
 ! Securly
+@@||pass.securly.com^
 ||securly.com^
 ||tabpilot.com^
-||uswest-www-alb-1430906465.us-west-1.elb.amazonaws.com^
 
 ! LanSchool (All Regions)
 ||lanschool.com^
@@ -85,24 +84,30 @@
 ||lsrelayaccess.com^
 ||devices.lsmdm.com^
 ||lsagent.fcps.org^
+||ls-papi.com^
+||catchon.com^
+||ls101cms.csspki.com^
+||ls-pki.css-security.com^
 ||lightspeed-apps.s3.amazonaws.com^
-||s3-website.us-west-2.amazonaws.com^
 ||lsrelay-config-production.s3.amazonaws.com^
 ||lsrelay-extensions-production.s3.amazonaws.com^
+||lsmdm-production.s3.amazonaws.com^
 ||b16rt683ll.execute-api.us-west-2.amazonaws.com^
 ||p7nvu5it0k.execute-api.us-west-2.amazonaws.com^
 ||5rw61tcrl5.execute-api.us-west-2.amazonaws.com^
-||sqs.us-west-2.amazonaws.com^
-||firehose.us-west-2.amazonaws.com^
-||us-west-2.elb.amazonaws.com^
-||relay-production-sockets-alb-1210277364.us-west-2.elb.amazonaws.com^
-||apiproxy-website-nlb-prod-3-ac110f6ae472b85a.elb.eu-west-1.amazonaws.com^
+||production-cp-01.lsfilter.com^
+||production-cb-01.lsfilter.com^
+||production-bp-01.lsfilter.com^
 ||lightspeed-realtime.ably.io^
+||lightspeed-rest.ably.io^
 ||a-fallback-lightspeed.ably.io^
 ||b-fallback-lightspeed.ably.io^
 ||c-fallback-lightspeed.ably.io^
-||global.stun.twillo.com^
-||global.turn.twillo.com^
+||lightspeed-a-fallback.ably-realtime.com^
+||lightspeed-b-fallback.ably-realtime.com^
+||lightspeed-c-fallback.ably-realtime.com^
+||lightspeed-d-fallback.ably-realtime.com^
+||lightspeed-e-fallback.ably-realtime.com^
 
 ! Deledao
 ||deledao.com^
@@ -137,17 +142,23 @@
 ||amplifiedit.com^
 ||gopher-buddy-prod.appspot.com^
 
-! Content Keeper
+! Ativion Software
 ||contentkeeper.com^
 ||contentkeeper.io^
 ||contentkeeper.net^
+||ck-express.com^
 ||fastvue.co^
 ||ativion.com^
+||ativionnx.com^
+||imperosoftware.com^
+||impero.com^
+||imperosoftware.co.uk^
 
 ! Iboss
 ||iboss.com^
 ||ibosscloud.com^
 ||iboss.si^
+||myiboss.net^
 
 ! Blocksi
 ||blocksi.net^
@@ -161,11 +172,25 @@
 ||zscalerone.net^
 ||zscaler.com^
 
+! NetSupport
+||netsupportsoftware.com^
+||netsupportdna.com^
+||netsupportschool.com^
+
+! MDM Infrastructure (Jamf / Mosyle)
+||sentry.pub.jamf.build^
+||jamfcloud.com^
+||jamf.com^
+||launchdarkly.com^
+||mosyle.com^
+||mosyle.net^
+
+! Life360
+||life360.com^
+||familysafetyproduction.com^
+||life360.pubnub.com^
+||life360-img.s3.amazonaws.com^
+
 ! General Parental Control
 ||kiddoware.com^
 ||mobileguardian.com^
-
-! Others (Common Dependencies)
-||ably.io^
-||pusher.com^
-||pusherapp.com^
