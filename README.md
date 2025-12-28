@@ -1,23 +1,24 @@
 # hapara.fail Blocklist
 
-**A DNS blocklist for neutralizing surveillance and content filtering systems in managed network environments.**
+**A unified blocklist for neutralizing surveillance and content filtering systems in managed network environments.**
 
-This repository contains a universal blocklist designed for seamless integration with modern DNS filtering solutions. Its purpose is to inhibit the function of software commonly used for student monitoring, web censorship, and other forms of network-level restriction.
+This repository contains a comprehensive blocklist designed for seamless integration with modern network filtering and ad-blocking solutions. Its purpose is to inhibit the function of software commonly used for student monitoring, web censorship, and other forms of network-level restriction.
 
 ### Core Features
 
 * **Focused Scope:** The list is curated to target domains directly associated with surveillance and filtering software, minimizing the potential for unintended service disruption.
 * **Adblock Plus Syntax:** Formatted using the `||domain.com^` syntax for compatibility with specific ad-blocking software, ensuring precise domain and subdomain blocking.
 * **Community-Maintained:** The blocklist is actively updated based on community-submitted intelligence and research to adapt to the changing domain infrastructure of targeted services.
-* **Privacy-Oriented:** Designed to restore user autonomy and enhance digital privacy by disabling intrusive network monitoring.
+* **Privacy-Oriented:** Designed to restore user autonomy and enhance digital privacy by disabling intrusive network monitoring and location tracking.
 
 ## Objective
 
-The primary objective of this blocklist is to provide network administrators and users with a tool to disable the functionality of specific third-party services. It operates by blocking DNS resolution for domains essential to the operation of:
+The primary objective of this blocklist is to provide network administrators and users with a tool to disable the functionality of specific third-party services. It operates by blocking connections to domains essential to the operation of:
 
 * **Student Monitoring & Surveillance:** Applications that monitor user activity, capture screen content, and report on browsing habits.
 * **Web Censorship & Filtering:** Cloud-based and on-premise solutions that restrict access to websites and online resources.
-* **Restrictive Network Technologies:** Various other services that limit user control and compromise privacy within a managed network.
+* **Device Management (MDM):** Infrastructure used to force-install applications and enforce restrictions on managed devices.
+* **Location Tracking:** Services used to track the physical location of users and devices.
 
 ## Format & Compatibility
 
@@ -44,7 +45,7 @@ The list is **not formatted for** the following software and is therefore incomp
 * DNS66
 * DNSCloak / DNSCrypt
 * DNSMasq
-* Hostfile-based blockers (Linux, etc.)
+* Hostfile-based blockers
 * InviZible Pro
 * Knot
 * Nebulo
@@ -71,7 +72,7 @@ Integration of the blocklist is a straightforward process for supported software
     > https://raw.githubusercontent.com/hapara-fail/blocklist/main/blocklist.txt
     > ```
 
-2.  **Add the URL to your DNS Filtering Solution:**
+2.  **Add the URL to your Blocking Solution:**
     * **Pi-hole:** Navigate to `Group Management` > `Adlists` and add the URL as a new list source.
     * **AdGuard Home:** Go to `Filters` > `DNS blocklists` and select "Add blocklist" to import the URL.
     * **uBlock Origin / AdNauseam:** Open the dashboard, go to the "Filter lists" tab, scroll down to the "Custom" section, and paste the URL into the "Import" field. Then, click "Apply changes."
@@ -79,7 +80,7 @@ Integration of the blocklist is a straightforward process for supported software
 
 ## Services Targeted
 
-The blocklist is organized by service category for transparency. It currently includes domains related to the following platforms, among others:
+The blocklist is organized by service category for transparency. It currently includes domains related to the following platforms:
 
 #### Monitoring & Classroom Management
 * Bark
@@ -88,7 +89,9 @@ The blocklist is organized by service category for transparency. It currently in
 * GoGuardian
 * Gopher
 * Hapara
+* Impero
 * LanSchool
+* NetSupport
 * Senso
 
 #### Content Filtering & Security
@@ -101,17 +104,26 @@ The blocklist is organized by service category for transparency. It currently in
 * Netsweeper
 * Securly
 * Smoothwall
+* Sophos
+* Zscaler
 
-#### Platform & Infrastructure
+#### Device Management (MDM) & Infrastructure
 * Anthology / Blackboard
 * Deledao
+* Jamf
 * LFGL (London Grid for Learning)
+* Mosyle
 * Pulse / EducatorImpact
 
+#### Parental Control & Location Tracking
+* Life360
+* Mobile Guardian
+* Kiddoware
+* Qustodio
+
 #### Common Dependencies
-* Ably
-* Pusher
-* Domains for CDNs and other backend services required by the above platforms.
+* Vendor-specific cloud infrastructure (AWS/Azure endpoints).
+* Specific realtime communication fallbacks used by filtering agents.
 
 ## Disclaimer and Important Considerations
 
@@ -130,4 +142,4 @@ Contributions are welcome to maintain the efficacy and accuracy of this list. If
 Please include supporting documentation or context for any proposed modifications.
 
 ---
-*This blocklist is an open-source initiative maintained by [hapara.fail](https://hapara.fail).*
+*This blocklist is an open-source initiative maintained by [hapara.fail](https://www.hapara.fail).*
