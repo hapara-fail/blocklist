@@ -69,7 +69,7 @@ Integration of the blocklist is a straightforward process for supported software
 
 1.  **Copy the Raw Blocklist URL:**
     > ```
-    > https://raw.githubusercontent.com/hapara-fail/blocklist/main/blocklist.txt
+    > https://cdn.jsdelivr.net/gh/hapara-fail/blocklist@main/blocklist.txt
     > ```
 
 2.  **Add the URL to your Blocking Solution:**
