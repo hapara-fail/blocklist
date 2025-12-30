@@ -122,6 +122,9 @@ The blocklist is organized by service category for transparency. It currently in
 * mSpy
 * Net Nanny
 * FamiSafe
+* SpyHuman
+* Mobicip
+* Kidlogger
 
 #### Common Dependencies
 * Vendor-specific cloud infrastructure (AWS/Azure endpoints).
