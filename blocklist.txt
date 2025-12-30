@@ -8,7 +8,7 @@
 ! Last modified: 28 Dec 2025 18:25 UTC
 ! Version: 2025.1228.1825.02
 ! Syntax: Adblock Plus
-! Number of entries: 144
+! Number of entries: 196
 !
 
 ! Hapara
@@ -116,14 +116,67 @@
 ||barkforschools.com^
 ||bark.app^
 
-! LFGL / Senso
+! LGFL / Senso
 ||lgfl.net^
+||lgfl.org.uk^
 ||safehomeschool.net^
 ||netsweeper.com^
 ||senso.cloud^
 ||sensoeugeneral.blob.core.windows.net^
 ||sensoeustorage.blob.core.windows.net^
 ||sensologarchivestorage.blob.core.windows.net^
+||sensologcapturesprodeu01.blob.core.windows.net^
+||sensologrulesetsprodeu01.blob.core.windows.net^
+||sensomoduleprodeu.blob.core.windows.net^
+||sensoportmodulestoreeu01.blob.core.windows.net^
+||sensonotificprodeu01.blob.core.windows.net^
+||sensoservicedeskprodeu01.blob.core.windows.net^
+||sensologcapturesprodeu02.blob.core.windows.net^
+||sensologrulesetsprodeu02.blob.core.windows.net^
+||sensoportmodstorprodeu02.blob.core.windows.net^
+||sensonotificprodeu02.blob.core.windows.net^
+||sensoservicedeskprodeu02.blob.core.windows.net^
+||sensologcapturesprodeu03.blob.core.windows.net^
+||sensologrulesetsprodeu03.blob.core.windows.net^
+||sensoportmodstorprodeu03.blob.core.windows.net^
+||sensonotificprodeu03.blob.core.windows.net^
+||sensoservicedeskprodeu03.blob.core.windows.net^
+||sensologcapturesprodeu04.blob.core.windows.net^
+||sensologrulesetsprodeu04.blob.core.windows.net^
+||sensoportmodstorprodeu04.blob.core.windows.net^
+||sensonotificprodeu04.blob.core.windows.net^
+||sensoservicedeskprodeu04.blob.core.windows.net^
+||sensologcapturesprodeu05.blob.core.windows.net^
+||sensologrulesetsprodeu05.blob.core.windows.net^
+||sensoportmodstorprodeu05.blob.core.windows.net^
+||sensonotificprodeu05.blob.core.windows.net^
+||sensoservicedeskprodeu05.blob.core.windows.net^
+||sensomoduleprodna.blob.core.windows.net^
+||sensologcapturesprodna01.blob.core.windows.net^
+||sensologrulesetsprodna01.blob.core.windows.net^
+||sensoportmodulestorena01.blob.core.windows.net^
+||sensonotificprodna01.blob.core.windows.net^
+||sensoservicedeskprodna01.blob.core.windows.net^
+||sensologcapturesprodna02.blob.core.windows.net^
+||sensologrulesetsprodna02.blob.core.windows.net^
+||sensoportmodulestorena02.blob.core.windows.net^
+||sensonotificprodna02.blob.core.windows.net^
+||sensoservicedeskprodna02.blob.core.windows.net^
+||sensologcapturesprodna03.blob.core.windows.net^
+||sensologrulesetsprodna03.blob.core.windows.net^
+||sensoportmodulestorena03.blob.core.windows.net^
+||sensonotificprodna03.blob.core.windows.net^
+||sensoservicedeskprodna03.blob.core.windows.net^
+||sensologcapturesprodna04.blob.core.windows.net^
+||sensologrulesetsprodna04.blob.core.windows.net^
+||sensoportmodulestorena04.blob.core.windows.net^
+||sensonotificprodna04.blob.core.windows.net^
+||sensoservicedeskprodna04.blob.core.windows.net^
+||sensologcapturesprodau01.blob.core.windows.net^
+||sensologrulesetsprodau01.blob.core.windows.net^
+||sensoportmodulestoreau01.blob.core.windows.net^
+||sensonotificprodau01.blob.core.windows.net^
+||sensoservicedeskprodau01.blob.core.windows.net^
 
 ! DyKnow
 ||dyknow.com^
