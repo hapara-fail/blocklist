@@ -135,9 +135,11 @@ The blocklist is organized by service category for transparency. It currently in
 
 ## 🤝 Contributions
 
-Contributions are welcome to maintain the efficacy and accuracy of this list. If you identify missing domains, incorrect entries, or domains that are no longer relevant, please assist by:
+Contributions are welcome to maintain the efficacy and accuracy of this list. To ensure changes are processed quickly and correctly, please review our **[Contributing Guidelines](https://github.com/hapara-fail/blocklist/blob/main/CONTRIBUTING.md)** before submitting.
 
-1.  **Opening an Issue** in this repository to report your findings.
+You can assist by:
+
+1.  **Opening an Issue** using our standardized templates to report missing domains or false positives.
 2.  **Submitting a Pull Request** with your proposed changes.
 
 Please include supporting documentation or context for any proposed modifications. You can also join our [Discord server](https://www.hapara.fail/discord) to discuss.
