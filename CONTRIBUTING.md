@@ -1,4 +1,4 @@
-# Contributing to the hapara.fail Blocklist
+# Contributing Guidelines
 
 First off, thank you for considering contributing to the **hapara.fail blocklist**. This project relies on community intelligence to stay ahead of the constantly shifting infrastructure of surveillance and filtering companies.
 
