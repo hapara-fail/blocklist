@@ -83,43 +83,42 @@ Integration of the blocklist is a straightforward process for supported software
 The blocklist is organized by service category for transparency. It currently includes domains related to the following platforms:
 
 #### Monitoring & Classroom Management
-* Bark
-* DyKnow
-* Gaggle
-* GoGuardian
-* Gopher
 * Hapara
-* Impero
+* GoGuardian
 * LanSchool
+* Bark
+* Gaggle
+* Blocksi
 * NetSupport
+* DyKnow
+* Impero
 * Senso
+* Pulse / EducatorImpact
 
 #### Content Filtering & Security
-* Blocksi
-* Content Keeper
-* Fortinet / FortiGuard
-* Iboss
 * Lightspeed Systems
-* Linewize / Qoria / FamilyZone
-* Netsweeper
 * Securly
+* iboss
+* Fortinet / FortiGuard
+* Zscaler
+* Linewize / Qoria / FamilyZone
+* Content Keeper
 * Smoothwall
 * Sophos
-* Zscaler
+* Netsweeper
+* Deledao
 
 #### Device Management (MDM) & Infrastructure
-* Anthology / Blackboard
-* Deledao
 * Jamf
-* LFGL (London Grid for Learning)
 * Mosyle
-* Pulse / EducatorImpact
+* Gopher
+* LFGL (London Grid for Learning)
+* Mobile Guardian
 
 #### Parental Control & Location Tracking
 * Life360
-* Mobile Guardian
-* Kiddoware
 * Qustodio
+* Kiddoware
 
 #### Common Dependencies
 * Vendor-specific cloud infrastructure (AWS/Azure endpoints).
