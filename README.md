@@ -110,7 +110,7 @@ The blocklist is organized by service category for transparency. It currently in
 * Jamf
 * Mosyle
 * Gopher
-* LFGL (London Grid for Learning)
+* LFGL
 * Mobile Guardian
 
 #### Parental Control & Location Tracking
