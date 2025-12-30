@@ -8,7 +8,7 @@
 ! Last modified: 28 Dec 2025 18:25 UTC
 ! Version: 2025.1228.1825.02
 ! Syntax: Adblock Plus
-! Number of entries: 133
+! Number of entries: 141
 !
 
 ! Hapara
@@ -186,7 +186,17 @@
 ||familysafetyproduction.com^
 ||life360.pubnub.com^
 ||life360-img.s3.amazonaws.com^
+||jiobit.com^
+
+! mSpy
+||mspy.com^
+||mspy-app.co^
+||mspyonline.com^
 
 ! General Parental Control
 ||kiddoware.com^
 ||mobileguardian.com^
+||findmykids.org^
+||troomi.com^
+||netnanny.com^
+||famisafe.wondershare.com^

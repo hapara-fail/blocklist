@@ -117,6 +117,11 @@ The blocklist is organized by service category for transparency. It currently in
 * Life360
 * Qustodio
 * Kiddoware
+* Findmykids
+* Troomi
+* mSpy
+* Net Nanny
+* FamiSafe
 
 #### Common Dependencies
 * Vendor-specific cloud infrastructure (AWS/Azure endpoints).
