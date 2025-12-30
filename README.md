@@ -131,20 +131,21 @@ The blocklist is organized by service category for transparency. It currently in
 * **Service Infrastructure:** Targeted services frequently update their domains and hosting infrastructure. Continuous maintenance of this list is required for it to remain effective.
 * **Responsible Use:** This blocklist is provided for informational purposes. Users are solely responsible for ensuring their use of this tool complies with all applicable acceptable use policies and local regulations.
 
----
+-----
 
-## 🤝 Contributions
+## 🤝 Contributing
 
-Contributions are welcome to maintain the efficacy and accuracy of this list. To ensure changes are processed quickly and correctly, please review our **[Contributing Guidelines](https://github.com/hapara-fail/blocklist/blob/main/CONTRIBUTING.md)** before submitting.
+Contributions are welcome! To ensure changes are processed quickly and correctly, please review our **[Contributing Guidelines](https://github.com/hapara-fail/blocklist/blob/main/CONTRIBUTING.md)** before submitting.
 
-You can assist by:
+If you have ideas for improvements, new tools, bug fixes, or blog post topics, please feel free to:
 
-1.  **Opening an Issue** using our standardized templates to report missing domains or false positives.
-2.  **Submitting a Pull Request** with your proposed changes.
+* **Open an Issue** on GitHub using our standardized templates.
+* **Submit a Pull Request** with your proposed changes.
+* Join our [Discord server](https://discord.gg/KA66dHUF4P) to discuss.
 
-Please include supporting documentation or context for any proposed modifications. You can also join our [Discord server](https://www.hapara.fail/discord) to discuss.
+You can also find donation options [here](https://hapara.fail/contribute).
 
----
+-----
 
 ## 📄 License
 
