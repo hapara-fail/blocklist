@@ -151,10 +151,10 @@ If you have ideas for improvements, new tools, bug fixes, or blog post topics, p
 * **Submit a Pull Request** with your proposed changes.
 * Join our [Discord server](https://discord.gg/KA66dHUF4P) to discuss.
 
-You can also find donation options [here](https://hapara.fail/contribute).
+You can also find donation options [here](https://www.hapara.fail/contribute).
 
 -----
 
 ## 📄 License
 
-This project is licensed under the terms specified at [license.hapara.fail](https://license.hapara.fail/).
+This project is licensed under the terms specified at [www.hapara.fail/license](https://www.hapara.fail/license).
