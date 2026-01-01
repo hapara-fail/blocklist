@@ -1,6 +1,6 @@
 ---
 name: False Positive / Removal
-about: Report a broken website or request a domain removal.
+about: Report a broken website or request a domain removal
 title: "[FP] "
 labels: false positive
 assignees: nota9x

@@ -1,6 +1,6 @@
 ---
 name: Service / Domain Addition
-about: Request a new service to be added or submit specific domains.
+about: Request a new service to be added or submit specific domains
 title: "[ADD] "
 labels: addition
 assignees: nota9x
