@@ -35,7 +35,7 @@ The `blocklist.txt` file uses **Adblock Plus (ABP) syntax**. All entries must st
 **Rules for Entries:**
 * **One domain per line.**
 * **No comments** inline with domains (unless absolutely necessary for section headers).
-* **Categorization:** Please place new domains under the correct Vendor Header (e.g., `### GoGuardian`, `### Lightspeed`). If adding a new vendor, create a new header using `! ### Vendor Name`.
+* **Categorization:** Please place new domains under the correct Vendor Header (e.g., `! GoGuardian`, `! Lightspeed`). If adding a new vendor, create a new header using `! Vendor Name`.
 
 ### 2. How to Contribute
 1.  **Fork** the repository to your own GitHub account.
