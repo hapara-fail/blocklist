@@ -8,7 +8,7 @@
 ! Last modified: 28 Dec 2025 18:25 UTC
 ! Version: 2025.1228.1825.02
 ! Syntax: Adblock Plus
-! Number of entries: 197
+! Number of entries: 198
 !
 
 ! Hapara
@@ -230,6 +230,7 @@
 ||sentry.pub.jamf.build^
 ||jamfcloud.com^
 ||jamf.com^
+||jamfschool.com^
 ||launchdarkly.com^
 ||mosyle.com^
 ||mosyle.net^
