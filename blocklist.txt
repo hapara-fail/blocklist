@@ -8,7 +8,7 @@
 ! Last modified: 28 Dec 2025 18:25 UTC
 ! Version: 2025.1228.1825.02
 ! Syntax: Adblock Plus
-! Number of entries: 198
+! Number of entries: 212
 !
 
 ! Hapara
@@ -19,6 +19,7 @@
 ||td-setup.appspot.com^
 
 ! Linewize / Qoria / FamilyZone / Sphirewall
+||linewize.com^
 ||block.tools^
 ||familyzone.com^
 ||familyzone.com.au^
@@ -26,7 +27,6 @@
 ||familyzone.tools^
 ||fzbox.tools^
 ||home.tools^
-||linewize.com^
 ||linewize.io^
 ||linewize.net^
 ||linewizereseller.net^
@@ -35,10 +35,13 @@
 ||qoriaapis.cloud^
 ||sphirewall.net^
 ||qustodio.com^
+||qoria-api.cloud^
+||net-ref.com^
 
 ! Smoothwall
-||smoothwall.cloud^
 ||smoothwall.com^
+||smoothwall.cloud^
+||smoothwall.cachefly.net^
 
 ! Gaggle
 ||gaggle.net^
@@ -104,6 +107,10 @@
 ||lightspeed-c-fallback.ably-realtime.com^
 ||lightspeed-d-fallback.ably-realtime.com^
 ||lightspeed-e-fallback.ably-realtime.com^
+
+! AristotleK12
+||aristotlek12.com^
+||sgtlabs.com^
 
 ! Deledao
 ||deledao.com^
@@ -182,9 +189,10 @@
 ||dyknow.com^
 
 ! Fortinet / FortiGuard
-||fortiguard.com^
 ||fortinet.com^
+||fortiguard.com^
 ||forticlient.com^
+||forticloud.com^
 
 ! Gopher
 ||gopherforchrome.app^
@@ -216,6 +224,11 @@
 
 ! Sophos
 ||sophos.com^
+||sophosxl.com^
+||sophosxl.net^
+||sophosupd.com^
+||sophosupd.net^
+||hitmanpro.com^
 
 ! Zscaler
 ||zscalerone.net^
@@ -225,6 +238,10 @@
 ||netsupportsoftware.com^
 ||netsupportdna.com^
 ||netsupportschool.com^
+
+! Radix VISO
+||visomdm.com^
+||radix-int.com^
 
 ! MDM Infrastructure (Jamf / Mosyle)
 ||sentry.pub.jamf.build^
@@ -241,6 +258,11 @@
 ||life360.pubnub.com^
 ||life360-img.s3.amazonaws.com^
 ||jiobit.com^
+
+! Faronics
+||faronics.com^
+||deepfreeze.com^
+||faronicsdeploy.com^
 
 ! mSpy
 ||mspy.com^
