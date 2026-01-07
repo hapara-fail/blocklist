@@ -5,10 +5,10 @@
 ! License: https://www.hapara.fail/license
 ! Issues: https://github.com/hapara-fail/blocklist/issues
 ! Expires: 3 days
-! Last modified: 28 Dec 2025 18:25 UTC
-! Version: 2025.1228.1825.02
+! Last modified: 07 Jan 2026 00:55 UTC
+! Version: 2026.0107.0055
 ! Syntax: Adblock Plus
-! Number of entries: 212
+! Number of entries: 217
 !
 
 ! Hapara
@@ -210,6 +210,8 @@
 ||imperosoftware.com^
 ||impero.com^
 ||imperosoftware.co.uk^
+||netop.com^
+||netop.cn^
 
 ! iboss
 ||iboss.com^
@@ -275,7 +277,9 @@
 ||findmykids.org^
 ||troomi.com^
 ||netnanny.com^
+||contentwatch.com^
 ||famisafe.wondershare.com^
 ||spyhuman.com^
 ||mobicip.com^
 ||kidlogger.net^
+||screentimelabs.com^
