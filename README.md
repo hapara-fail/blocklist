@@ -138,6 +138,7 @@ The blocklist is organized by service category for transparency. It currently in
 - SpyHuman
 - Mobicip
 - Kidlogger
+- Screen Time Labs
 
 #### Common Dependencies
 
@@ -163,7 +164,7 @@ If you have ideas for improvements, new tools, bug fixes, or blog post topics, p
 
 - **Open an Issue** on GitHub using our standardized templates.
 - **Submit a Pull Request** with your proposed changes.
-- Join our [Discord server](https://discord.gg/KA66dHUF4P) to discuss.
+- Join our [Discord server](https://www.hapara.fail/discord) to discuss.
 
 You can also find donation options [here](https://www.hapara.fail/contribute).
 
