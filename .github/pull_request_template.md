@@ -27,7 +27,7 @@ _How did you verify these changes?_
 **5. Placement:**
 _Where did you put the new domains?_
 
-- [ ] Under the correct Vendor Header (e.g., `### Lightspeed`).
+- [ ] Under the correct Vendor Header (e.g., `! Lightspeed`).
 - [ ] Created a new header for a new service.
 
 ---
