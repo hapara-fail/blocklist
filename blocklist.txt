@@ -8,7 +8,7 @@
 ! Last modified: 07 Jan 2026 00:55 UTC
 ! Version: 2026.0107.0055
 ! Syntax: Adblock Plus
-! Number of entries: 217
+! Number of entries: 220
 !
 
 ! Hapara
@@ -221,8 +221,11 @@
 
 ! Blocksi
 ||blocksi.net^
+||blocksicloud.com^
 ||blocksicloud.net^
 ||block.si^
+||blocksi-dns.appspot.com^
+||brm-v3.appspot.com^
 
 ! Sophos
 ||sophos.com^
