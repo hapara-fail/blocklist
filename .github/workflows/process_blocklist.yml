@@ -1,0 +1,42 @@
+name: Process Blocklist
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'blocklist.txt'
+
+permissions:
+  contents: write
+
+jobs:
+  validate-and-update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+          check-latest: true
+
+      - name: Validate and Process Blocklist
+        run: python process_blocklist.py blocklist.txt
+
+      - name: Commit and Push changes
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          
+          if [[ -n $(git status -s blocklist.txt) ]]; then
+            git add blocklist.txt
+            git commit -m "Auto-update: Metadata and entry count [skip ci]"
+            git pull --rebase origin main
+            git push
+          else
+            echo "No changes needed."
+          fi
