@@ -25,4 +25,4 @@ Join our community on Discord to get help from other users and the team:
 
 ## 🐛 Bug Reports & Feature Requests
 
-If you've found a bug in the website or have an idea for a new feature, please [open an issue](https://github.com/hapara-fail/website/issues/new/choose) on our GitHub repository.
+If you've found a bug in the website or have an idea for a new feature, please [open an issue](https://github.com/hapara-fail/blocklist/issues/new/choose) on our GitHub repository.
