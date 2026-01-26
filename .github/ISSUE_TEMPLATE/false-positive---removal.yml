@@ -1,0 +1,63 @@
+name: False Positive / Removal
+description: Report a broken website or request a domain removal
+title: '[FP] '
+labels: ['false positive']
+assignees:
+  - nota9x
+body:
+  - type: markdown
+    attributes:
+      value: |
+        # False Positive / Removal Request
+        
+        Please provide detailed information about the domain causing issues.
+  
+  - type: textarea
+    id: domains
+    attributes:
+      label: 1. Domain(s) causing issues
+      description: Which domain needs to be unblocked?
+      placeholder: example.com
+    validations:
+      required: true
+  
+  - type: textarea
+    id: broken-service
+    attributes:
+      label: 2. What is broken?
+      description: Which legitimate website or service is failing?
+      placeholder: e.g., "Google Classroom login," "Youtube comments," "School portal"
+    validations:
+      required: true
+  
+  - type: textarea
+    id: reproduce-steps
+    attributes:
+      label: 3. Steps to Reproduce
+      description: How can we see the error?
+      placeholder: |
+        1. Go to...
+        2. Click on...
+        3. See error...
+    validations:
+      required: true
+  
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 4. Evidence
+      description: Please paste a screenshot of the error or the blocked request log here. This is crucial for fixing it quickly.
+      placeholder: Paste screenshot or error logs here
+    validations:
+      required: true
+  
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmation
+      description: Please confirm the following
+      options:
+        - label: I have searched existing issues to ensure this hasn't already been reported.
+          required: true
+        - label: I have confirmed that temporarily unblocking this domain fixes the issue.
+          required: true
