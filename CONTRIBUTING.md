@@ -12,7 +12,7 @@ We have simplified our reporting process. Please use the direct links below to *
 
 If you want to block a new monitoring service, filter, or tracker:
 
-- **[Click here to open a Service / Domain Addition Issue](https://github.com/hapara-fail/blocklist/issues/new?template=service---domain-addition.md)**
+- **[Click here to open a Service / Domain Addition Issue](https://github.com/hapara-fail/blocklist/issues/new?template=service---domain-addition.yml)**
 - **You do NOT need to know the specific domains.** You can simply request that we investigate a specific service (e.g., "Please add Impero Classroom").
 - If you _do_ know the domains, please list them to speed up the process.
 
@@ -20,7 +20,7 @@ If you want to block a new monitoring service, filter, or tracker:
 
 If a legitimate educational resource, school portal, or essential website is broken because of this blocklist:
 
-- **[Click here to open a False Positive / Removal Issue](https://github.com/hapara-fail/blocklist/issues/new?template=false-positive---removal.md)**
+- **[Click here to open a False Positive / Removal Issue](https://github.com/hapara-fail/blocklist/issues/new?template=false-positive---removal.yml)**
 - **Crucial:** Please provide as much detail as possible about _what_ is broken and _which_ domain is causing it (if you know).
 - Screenshots of error messages or network logs are extremely helpful.
 
