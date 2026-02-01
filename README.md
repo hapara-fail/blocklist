@@ -139,6 +139,18 @@ The blocklist is organized by service category for transparency. It currently in
 - Mobicip
 - Kidlogger
 - Screen Time Labs
+- OurPact
+- Kidslox
+- Boomerang
+- MMGuardian
+- WebWatcher
+- ClevGuard / KidsGuard
+- FlexiSPY
+- Spyrix
+- Hoverwatch
+- uMobix
+- XNSPY
+- Circle
 
 #### Common Dependencies
 

@@ -263,6 +263,12 @@
 ||life360.pubnub.com^
 ||life360-img.s3.amazonaws.com^
 ||jiobit.com^
+||lf360.co^
+||life360-dev.tile-api.com^
+||life360.atlassian.net^
+||life360-location-dev.tile-api.com^
+||life360feedback.typeform.com^
+||life360-com-l360safetycenter.firebaseio.com^
 
 ! Faronics
 ||faronics.com^
@@ -274,15 +280,54 @@
 ||mspy-app.co^
 ||mspyonline.com^
 
+! FamiSafe
+||famisafe.wondershare.com^
+||famisafeapp.wondershare.com^
+||300624.com^
+||famisafe.com^
+||famisafe-b6807.firebaseio.com^
+||wondershare.cc^
+
+! Findmykids
+||findmykids.org^
+||where-is-my-children.firebaseio.com^
+
+! Kidslox
+||kidslox.com^
+||kidslox.page.link^
+||kidslox.firebaseio.com^
+||kdlparentalcontrol.com^
+
+! ClevGuard / KidsGuard
+||clevguard.com^
+||clevguard.org^
+
+! Spyrix
+||spyrix.com^
+||spyrix.net^
+||spyrix.pro^
+
+! Circle
+||meetcircle.com^
+||meetcircle-blue.com^
+||meetcircle-netgear.co^
+||meetcircle-sky.co^
+
 ! General Parental Control
 ||kiddoware.com^
 ||mobileguardian.com^
-||findmykids.org^
 ||troomi.com^
 ||netnanny.com^
 ||contentwatch.com^
-||famisafe.wondershare.com^
 ||spyhuman.com^
 ||mobicip.com^
 ||kidlogger.net^
 ||screentimelabs.com^
+||ourpact.com^
+||useboomerang.com^
+||mmguardian.com^
+||webwatcher.com^
+||flexispy.com^
+||hoverwatch.com^
+||umobix.com^
+||xnspy.com^
