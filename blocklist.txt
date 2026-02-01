@@ -262,6 +262,7 @@
 ||familysafetyproduction.com^
 ||life360.pubnub.com^
 ||life360-img.s3.amazonaws.com^
+||life360-wordpress.s3.amazonaws.com^
 ||jiobit.com^
 ||lf360.co^
 ||life360-dev.tile-api.com^
@@ -290,6 +291,7 @@
 
 ! Findmykids
 ||findmykids.org^
+||findmychilds.org^
 ||where-is-my-children.firebaseio.com^
 
 ! Kidslox
@@ -313,6 +315,26 @@
 ||meetcircle-netgear.co^
 ||meetcircle-sky.co^
 
+! Accountable2You
+||accountable2you.com^
+||accountable2you-android.firebaseio.com^
+
+! Microsoft Family Safety
+||family.microsoft.com^
+||location.family.microsoft.com^
+||mobileaggregator.family.microsoft.com^
+||safedriving.family.microsoft.com^
+
+! Geozilla
+||geozilla.com^
+||geozilla.autosmartins.com^
+||geozillafamily.firebaseio.com^
+||geozillafamily-c92d0.firebaseio.com^
+
+! FamilyOrbit
+||familyorbit.com^
+||familyorbit.net^
+
 ! General Parental Control
 ||kiddoware.com^
 ||mobileguardian.com^
@@ -331,3 +353,9 @@
 ||hoverwatch.com^
 ||umobix.com^
 ||xnspy.com^
+||truple.io^
+||kidgy.com^
+||seekdroid.com^
+||lockittight.com^
+||safenet.family^
+||discovenger.com^

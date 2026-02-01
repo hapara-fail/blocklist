@@ -132,6 +132,7 @@ The blocklist is organized by service category for transparency. It currently in
 - Kiddoware
 - Findmykids
 - Troomi
+- Microsoft Family Safety
 - mSpy
 - Net Nanny
 - FamiSafe
@@ -151,6 +152,16 @@ The blocklist is organized by service category for transparency. It currently in
 - uMobix
 - XNSPY
 - Circle
+- Accountable2You
+- Geozilla
+- FamilyOrbit
+- Truple
+- Kidgy
+- SeekDroid
+- LockItTight
+- SafeNet
+- Discovenger
+
 
 #### Common Dependencies
 

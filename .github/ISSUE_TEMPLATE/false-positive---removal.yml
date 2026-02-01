@@ -26,7 +26,7 @@ body:
     attributes:
       label: 2. What is broken?
       description: Which legitimate website or service is failing?
-      placeholder: e.g., "Google Classroom login," "Youtube comments," "School portal"
+      placeholder: e.g., "Google Classroom login," "YouTube comments," "School portal"
     validations:
       required: true
   
