@@ -129,6 +129,7 @@ The blocklist is organized by service category for transparency. It currently in
 
 - Life360
 - Qustodio
+- Google Family Link
 - Kiddoware
 - Findmykids
 - Troomi

@@ -335,6 +335,11 @@
 ||familyorbit.com^
 ||familyorbit.net^
 
+! Google Family Link
+! Note: Although blocking is incomplete, we are conservative to prevent overlap.
+||kidsmanagement-pa.googleapis.com^
+||kidsmanagement-pa.clients6.google.com^
+
 ! General Parental Control
 ||kiddoware.com^
 ||mobileguardian.com^
