@@ -101,6 +101,7 @@ The blocklist is organized by service category for transparency. It currently in
 - Senso
 - Faronics Insight
 - Pulse / EducatorImpact
+- LearnSafe
 
 #### Content Filtering & Security
 
@@ -115,6 +116,7 @@ The blocklist is organized by service category for transparency. It currently in
 - Sophos
 - Netsweeper
 - Deledao
+- ManagedMethods
 
 #### Device Management (MDM) & Infrastructure
 
@@ -162,6 +164,8 @@ The blocklist is organized by service category for transparency. It currently in
 - LockItTight
 - SafeNet
 - Discovenger
+- Eyezy
+- Canopy
 
 
 #### Common Dependencies

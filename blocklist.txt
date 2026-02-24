@@ -35,8 +35,14 @@
 ||qoriaapis.cloud^
 ||sphirewall.net^
 ||qustodio.com^
+||qustodio.net^
+||qustodio.org^
+||qustodio.es^
+||qustodio.app^
+||custodio.com^
 ||qoria-api.cloud^
 ||net-ref.com^
+||cipafilter.com^
 
 ! Smoothwall
 ||smoothwall.com^
@@ -244,6 +250,12 @@
 ||netsupportdna.com^
 ||netsupportschool.com^
 
+! LearnSafe
+||learnsafe.com^
+
+! ManagedMethods
+||managedmethods.com^
+
 ! Radix VISO
 ||visomdm.com^
 ||radix-int.com^
@@ -335,6 +347,10 @@
 ||familyorbit.com^
 ||familyorbit.net^
 
+! Eyezy
+||eyezy.com^
+||q12z.net^
+
 ! Google Family Link
 ! Note: Although blocking is incomplete, we are conservative to prevent overlap.
 ||kidsmanagement-pa.googleapis.com^
@@ -364,3 +380,5 @@
 ||lockittight.com^
 ||safenet.family^
 ||discovenger.com^
+||canopy.us^
+
