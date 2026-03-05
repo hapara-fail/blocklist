@@ -46,7 +46,7 @@ body:
     id: evidence
     attributes:
       label: 4. Evidence
-      description: Please paste a screenshot of the error or the blocked request log here. This is crucial for fixing it quickly.
+      description: Please paste a screenshot of the error or the blocked request log here.
       placeholder: Paste screenshot or error logs here
     validations:
       required: true

@@ -12,15 +12,23 @@ We have simplified our reporting process. Please use the direct links below to *
 
 If you want to block a new monitoring service, filter, or tracker:
 
-- **[Click here to open a Service / Domain Addition Issue](https://github.com/hapara-fail/blocklist/issues/new?template=service---domain-addition.yml)**
+- **[Click here to open a Service / Domain Addition Issue](https://github.com/hapara-fail/blocklist/issues/new?template=addition.yml)**
 - **You do NOT need to know the specific domains.** You can simply request that we investigate a specific service (e.g., "Please add Impero Classroom").
 - If you _do_ know the domains, please list them to speed up the process.
 
-### 2. Reporting False Positives (Broken Sites)
+### 2. Reporting Patched Systems (Failsafes)
+
+If a monitoring or filtering system has updated to block all internet access when its domains are unreachable (a "failsafe"):
+
+- **[Click here to open a Patched System / Failsafe Issue](https://github.com/hapara-fail/blocklist/issues/new?template=patched.yml)**
+- **Crucial:** Please provide the exact extension or software version number. This helps us track which updates introduced the failsafe.
+- Include details about the resulting behavior (e.g., a generic browser "No Internet" error versus a specific block page from the vendor).
+
+### 3. Reporting False Positives (Broken Sites)
 
 If a legitimate educational resource, school portal, or essential website is broken because of this blocklist:
 
-- **[Click here to open a False Positive / Removal Issue](https://github.com/hapara-fail/blocklist/issues/new?template=false-positive---removal.yml)**
+- **[Click here to open a False Positive / Removal Issue](https://github.com/hapara-fail/blocklist/issues/new?template=removal.yml)**
 - **Crucial:** Please provide as much detail as possible about _what_ is broken and _which_ domain is causing it (if you know).
 - Screenshots of error messages or network logs are extremely helpful.
 
@@ -68,7 +76,7 @@ Finding the right domain to block can be tricky. Here are a few tips:
 
 ## 🤝 Code of Conduct
 
-We value accuracy, privacy, and collaboration. Please ensure your interactions—whether in issues, pull requests, or Discord—are respectful and constructive. By participating, you are expected to uphold our **[Code of Conduct](https://github.com/hapara-fail/blocklist/blob/main/CODE_OF_CONDUCT.md)**.
+We value accuracy, privacy, and collaboration. Please ensure your interactions—whether in issues, pull requests, or Discord—are respectful and constructive. By participating, you are expected to uphold our **[Code of Conduct](CODE_OF_CONDUCT.md)**.
 
 ## 📜 License
 

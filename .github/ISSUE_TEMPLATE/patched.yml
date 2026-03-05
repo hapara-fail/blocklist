@@ -1,0 +1,72 @@
+name: Patched System / Failsafe
+description: Report a service that inhibits internet access when its domains are blocked
+title: '[PATCH] '
+labels: ['patched']
+assignees:
+  - nota9x
+body:
+  - type: markdown
+    attributes:
+      value: |
+        # Patched System Report
+        
+        Use this form to report a monitoring or filtering system that has implemented a "failsafe" (meaning it completely severs internet access or web browsing when it cannot reach its servers).
+  
+  - type: textarea
+    id: service-name
+    attributes:
+      label: 1. Service Name
+      description: Which software or service has been patched?
+      placeholder: e.g., "Securly", "Hapara", "Linewize"
+    validations:
+      required: true
+  
+  - type: textarea
+    id: symptoms
+    attributes:
+      label: 2. What exactly happens?
+      description: Describe the behavior when the domains are blocked. Do you get a generic "No Internet" browser error, or a specific block page from the vendor?
+      placeholder: e.g., "Chrome shows 'ERR_INTERNET_DISCONNECTED' for all sites" or "The extension shows a red 'Connection Lost' page."
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: 3. Extension / Software Version
+      description: What version of the monitoring/filtering software is currently installed? (You can usually find this in your browser's extension settings or system tray).
+      placeholder: e.g., 2.1.4
+    validations:
+      required: true
+  
+  - type: textarea
+    id: environment
+    attributes:
+      label: 4. Environment Details
+      description: What OS, browser, and blocking method are you using? This helps us determine if the patch is universal or specific to certain setups.
+      placeholder: |
+        - OS: ChromeOS / Windows 11 / macOS
+        - Browser: Chrome / Edge
+        - Blocker: uBlock Origin / Pi-hole / DNS
+    validations:
+      required: true
+  
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 5. Evidence / Screenshots
+      description: Please provide screenshots of the error screen or extension behavior.
+      placeholder: Paste screenshots or logs here
+    validations:
+      required: true
+  
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmation
+      description: Please confirm the following
+      options:
+        - label: I have searched existing issues to ensure this hasn't already been reported.
+          required: true
+        - label: I have verified that completely disabling the blocklist restores normal internet access.
+          required: true

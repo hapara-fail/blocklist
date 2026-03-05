@@ -57,7 +57,7 @@
 ||educatorimpact.com^
 ||eipulse.zendesk.com^
 
-! GoGuardian
+! GoGuardian [PATCHED]
 ||goguardian.com^
 ||laptoplookout.com^
 ||hosted-extensions.s3.us-west-2.amazonaws.com^
@@ -75,7 +75,7 @@
 ||lenovosoftware.com^
 ||lsair.app^
 
-! Lightspeed Systems
+! Lightspeed Systems [PATCHED]
 ||lightspeedsystems.com^
 ||lsmdm.com^
 ||lsaccess.me^

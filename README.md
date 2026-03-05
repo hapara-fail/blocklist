@@ -167,11 +167,12 @@ The blocklist is organized by service category for transparency. It currently in
 - Eyezy
 - Canopy
 
+#### Known Patched Systems
 
-#### Common Dependencies
+The following systems have implemented hardcoded failsafes. **Blocking these domains will result in a total loss of web browsing capabilities** rather than a successful bypass, as they sever the internet connection when server communication fails.
 
-- Vendor-specific cloud infrastructure (AWS/Azure endpoints).
-- Specific realtime communication fallbacks used by filtering agents.
+- GoGuardian
+- Lightspeed Systems
 
 ---
 
@@ -186,7 +187,7 @@ The blocklist is organized by service category for transparency. It currently in
 
 ## 🤝 Contributing
 
-Contributions are welcome! To ensure changes are processed quickly and correctly, please review our **[Contributing Guidelines](https://github.com/hapara-fail/blocklist/blob/main/CONTRIBUTING.md)** before submitting.
+Contributions are welcome! To ensure changes are processed quickly and correctly, please review our **[Contributing Guidelines](CONTRIBUTING.md)** before submitting.
 
 If you have ideas for improvements, new tools, bug fixes, or blog post topics, please feel free to:
 
