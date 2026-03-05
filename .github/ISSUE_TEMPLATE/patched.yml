@@ -10,7 +10,7 @@ body:
       value: |
         # Patched System Report
         
-        Use this form to report a monitoring or filtering system that has implemented a "failsafe" (meaning it completely severs internet access or web browsing when it cannot reach its servers).
+        Use this form to report a monitoring or filtering system that has implemented a "failsafe" (meaning it inhibits internet access or web browsing when it cannot reach its servers).
   
   - type: textarea
     id: service-name
