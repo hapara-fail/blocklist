@@ -5,380 +5,339 @@
 ! License: https://www.hapara.fail/license
 ! Issues: https://github.com/hapara-fail/blocklist/issues
 ! Expires: 3 days
-! Last modified: 05 Mar 2026 21:41 UTC
-! Version: 2026.0305.2141
+! Last modified: 27 Mar 2026 00:43 UTC
+! Version: 2026.0327.0043
 ! Syntax: Adblock Plus
 ! Number of entries: 286
 !
 
 ! Hapara
-||hapara.com^
-||haparaview.appspot.com^
-||teacherdashboard.com^
-||td-admin.appspot.com^
-||td-setup.appspot.com^
 
-! Linewize / Qoria / FamilyZone / Sphirewall
-||linewize.com^
-||block.tools^
-||familyzone.com^
-||familyzone.com.au^
-||familyzone.io^
-||familyzone.tools^
-||fzbox.tools^
-||home.tools^
-||linewize.io^
-||linewize.net^
-||linewizereseller.net^
-||qoria.cloud^
-||qoria.com^
-||qoriaapis.cloud^
-||sphirewall.net^
-||qustodio.com^
-||qustodio.net^
-||qustodio.org^
-||qustodio.es^
-||qustodio.app^
-||custodio.com^
-||qoria-api.cloud^
-||net-ref.com^
-||cipafilter.com^
-
-! Smoothwall
-||smoothwall.com^
-||smoothwall.cloud^
-||smoothwall.cachefly.net^
-
+! Accountable2You
+! AristotleK12
+! Ativion Software
+! Bark
+! Blocksi
+! Circle
+! ClevGuard / KidsGuard
+! Deledao
+! DyKnow
+! Eyezy
+! FamilyOrbit
+! FamiSafe
+! Faronics
+! Findmykids
+! Fortinet / FortiGuard
 ! Gaggle
-||gaggle.net^
-||gaggle.services^
-
+! General Parental Control
+! Geozilla
+! GoGuardian [PATCHED]
+! Google Family Link
+! Gopher
+! iboss
+! Kidslox
+! LanSchool (All Regions)
+! LearnSafe
+! LGFL / Senso
+! Life360
+! Lightspeed Systems [PATCHED]
+! Linewize / Qoria / FamilyZone / Sphirewall
+! ManagedMethods
+! MDM Infrastructure (Jamf / Mosyle)
+! Microsoft Family Safety
+! mSpy
+! NetSupport
+! Note: Although blocking is incomplete, we are conservative to prevent overlap.
 ! Pulse (and related services: EducatorImpact)
+! Radix VISO
+! Securly
+! Smoothwall
+! Sophos
+! Spyrix
+! Zscaler
+@@||pass.securly.com^
+||300624.com^
+||5rw61tcrl5.execute-api.us-west-2.amazonaws.com^
+||a-fallback-lightspeed.ably.io^
+||accountable2you-android.firebaseio.com^
+||accountable2you.com^
+||amplifiedit.com^
+||apisanta.com^
+||aristotlek12.com^
+||ativion.com^
+||ativionnx.com^
+||b-fallback-lightspeed.ably.io^
+||b16rt683ll.execute-api.us-west-2.amazonaws.com^
+||bark.app^
+||bark.us^
+||barkforschools.com^
+||beacon-report-uploads-prod.s3.us-west-2.amazonaws.com^
+||block.si^
+||block.tools^
+||blocksi-dns.appspot.com^
+||blocksi.net^
+||blocksicloud.com^
+||blocksicloud.net^
+||brm-v3.appspot.com^
+||c-fallback-lightspeed.ably.io^
+||canopy.us^
+||catchon.com^
+||cipafilter.com^
+||ck-express.com^
+||clevguard.com^
+||clevguard.org^
+||contentkeeper.com^
+||contentkeeper.io^
+||contentkeeper.net^
+||contentwatch.com^
+||custodio.com^
+||deepfreeze.com^
+||deledao.com^
+||deledao.net^
+||devices.lsmdm.com^
+||discovenger.com^
+||dldschool.org^
+||dyknow.com^
 ||educatorimpact.com^
 ||eipulse.zendesk.com^
-
-! GoGuardian [PATCHED]
+||eyezy.com^
+||family.microsoft.com^
+||familyorbit.com^
+||familyorbit.net^
+||familysafetyproduction.com^
+||familyzone.com.au^
+||familyzone.com^
+||familyzone.io^
+||familyzone.tools^
+||famisafe-b6807.firebaseio.com^
+||famisafe.com^
+||famisafe.wondershare.com^
+||famisafeapp.wondershare.com^
+||faronics.com^
+||faronicsdeploy.com^
+||fastvue.co^
+||findmychilds.org^
+||findmykids.org^
+||flexispy.com^
+||forticlient.com^
+||forticloud.com^
+||fortiguard.com^
+||fortinet.com^
+||fzbox.tools^
+||gaggle.net^
+||gaggle.services^
+||geozilla.autosmartins.com^
+||geozilla.com^
+||geozillafamily-c92d0.firebaseio.com^
+||geozillafamily.firebaseio.com^
 ||goguardian.com^
-||laptoplookout.com^
+||gopher-buddy-prod.appspot.com^
+||gopherforchrome.app^
+||hapara.com^
+||haparaview.appspot.com^
+||hitmanpro.com^
+||home.tools^
 ||hosted-extensions.s3.us-west-2.amazonaws.com^
-||x3-report-uploads.s3.us-west-2.amazonaws.com^
-||beacon-report-uploads-prod.s3.us-west-2.amazonaws.com^
-
-! Securly
-@@||pass.securly.com^
-||securly.com^
-||tabpilot.com^
-
-! LanSchool (All Regions)
+||hoverwatch.com^
+||iboss.com^
+||iboss.si^
+||ibosscloud.com^
+||impero.com^
+||imperosoftware.co.uk^
+||imperosoftware.com^
+||jamf.com^
+||jamfcloud.com^
+||jamfschool.com^
+||jiobit.com^
+||kdlparentalcontrol.com^
+||kiddoware.com^
+||kidgy.com^
+||kidlogger.net^
+||kidslox.com^
+||kidslox.firebaseio.com^
+||kidslox.page.link^
+||kidsmanagement-pa.clients6.google.com^
+||kidsmanagement-pa.googleapis.com^
+||l5c.io^
 ||lanschool.com^
 ||lanschoolair.com^
+||laptoplookout.com^
+||launchdarkly.com^
+||learnsafe.com^
 ||lenovosoftware.com^
-||lsair.app^
-
-! Lightspeed Systems [PATCHED]
-||lightspeedsystems.com^
-||lsmdm.com^
-||lsaccess.me^
-||lsfilter.com^
-||relay.school^
-||lightspeedsystems.app^
-||l5c.io^
-||lsaccess.com^
-||lsurl.me^
-||lsclassroom.com^
-||lsrelayaccess.com^
-||devices.lsmdm.com^
-||lsagent.fcps.org^
-||ls-papi.com^
-||catchon.com^
-||ls101cms.csspki.com^
-||ls-pki.css-security.com^
-||lightspeed-apps.s3.amazonaws.com^
-||lsrelay-config-production.s3.amazonaws.com^
-||lsrelay-extensions-production.s3.amazonaws.com^
-||lsmdm-production.s3.amazonaws.com^
-||b16rt683ll.execute-api.us-west-2.amazonaws.com^
-||p7nvu5it0k.execute-api.us-west-2.amazonaws.com^
-||5rw61tcrl5.execute-api.us-west-2.amazonaws.com^
-||production-cp-01.lsfilter.com^
-||production-cb-01.lsfilter.com^
-||production-bp-01.lsfilter.com^
-||lightspeed-realtime.ably.io^
-||lightspeed-rest.ably.io^
-||a-fallback-lightspeed.ably.io^
-||b-fallback-lightspeed.ably.io^
-||c-fallback-lightspeed.ably.io^
+||lf360.co^
+||lgfl.net^
+||lgfl.org.uk^
+||life360-com-l360safetycenter.firebaseio.com^
+||life360-dev.tile-api.com^
+||life360-img.s3.amazonaws.com^
+||life360-location-dev.tile-api.com^
+||life360-wordpress.s3.amazonaws.com^
+||life360.atlassian.net^
+||life360.com^
+||life360.pubnub.com^
+||life360feedback.typeform.com^
 ||lightspeed-a-fallback.ably-realtime.com^
+||lightspeed-apps.s3.amazonaws.com^
 ||lightspeed-b-fallback.ably-realtime.com^
 ||lightspeed-c-fallback.ably-realtime.com^
 ||lightspeed-d-fallback.ably-realtime.com^
 ||lightspeed-e-fallback.ably-realtime.com^
-
-! AristotleK12
-||aristotlek12.com^
-||sgtlabs.com^
-
-! Deledao
-||deledao.com^
-||deledao.net^
-||dldschool.org^
-||apisanta.com^
-
-! Bark
-||bark.us^
-||barkforschools.com^
-||bark.app^
-
-! LGFL / Senso
-||lgfl.net^
-||lgfl.org.uk^
-||safehomeschool.net^
+||lightspeed-realtime.ably.io^
+||lightspeed-rest.ably.io^
+||lightspeedsystems.app^
+||lightspeedsystems.com^
+||linewize.com^
+||linewize.io^
+||linewize.net^
+||linewizereseller.net^
+||location.family.microsoft.com^
+||lockittight.com^
+||ls-papi.com^
+||ls-pki.css-security.com^
+||ls101cms.csspki.com^
+||lsaccess.com^
+||lsaccess.me^
+||lsagent.fcps.org^
+||lsair.app^
+||lsclassroom.com^
+||lsfilter.com^
+||lsmdm-production.s3.amazonaws.com^
+||lsmdm.com^
+||lsrelay-config-production.s3.amazonaws.com^
+||lsrelay-extensions-production.s3.amazonaws.com^
+||lsrelayaccess.com^
+||lsurl.me^
+||managedmethods.com^
+||meetcircle-blue.com^
+||meetcircle-netgear.co^
+||meetcircle-sky.co^
+||meetcircle.com^
+||mmguardian.com^
+||mobicip.com^
+||mobileaggregator.family.microsoft.com^
+||mobileguardian.com^
+||mosyle.com^
+||mosyle.net^
+||mspy-app.co^
+||mspy.com^
+||mspyonline.com^
+||myiboss.net^
+||net-ref.com^
+||netnanny.com^
+||netop.cn^
+||netop.com^
+||netsupportdna.com^
+||netsupportschool.com^
+||netsupportsoftware.com^
 ||netsweeper.com^
+||ourpact.com^
+||p7nvu5it0k.execute-api.us-west-2.amazonaws.com^
+||production-bp-01.lsfilter.com^
+||production-cb-01.lsfilter.com^
+||production-cp-01.lsfilter.com^
+||q12z.net^
+||qoria-api.cloud^
+||qoria.cloud^
+||qoria.com^
+||qoriaapis.cloud^
+||qustodio.app^
+||qustodio.com^
+||qustodio.es^
+||qustodio.net^
+||qustodio.org^
+||radix-int.com^
+||relay.school^
+||safedriving.family.microsoft.com^
+||safehomeschool.net^
+||safenet.family^
+||screentimelabs.com^
+||securly.com^
+||seekdroid.com^
 ||senso.cloud^
 ||sensoeugeneral.blob.core.windows.net^
 ||sensoeustorage.blob.core.windows.net^
 ||sensologarchivestorage.blob.core.windows.net^
-||sensologcapturesprodeu01.blob.core.windows.net^
-||sensologrulesetsprodeu01.blob.core.windows.net^
-||sensomoduleprodeu.blob.core.windows.net^
-||sensoportmodulestoreeu01.blob.core.windows.net^
-||sensonotificprodeu01.blob.core.windows.net^
-||sensoservicedeskprodeu01.blob.core.windows.net^
-||sensologcapturesprodeu02.blob.core.windows.net^
-||sensologrulesetsprodeu02.blob.core.windows.net^
-||sensoportmodstorprodeu02.blob.core.windows.net^
-||sensonotificprodeu02.blob.core.windows.net^
-||sensoservicedeskprodeu02.blob.core.windows.net^
-||sensologcapturesprodeu03.blob.core.windows.net^
-||sensologrulesetsprodeu03.blob.core.windows.net^
-||sensoportmodstorprodeu03.blob.core.windows.net^
-||sensonotificprodeu03.blob.core.windows.net^
-||sensoservicedeskprodeu03.blob.core.windows.net^
-||sensologcapturesprodeu04.blob.core.windows.net^
-||sensologrulesetsprodeu04.blob.core.windows.net^
-||sensoportmodstorprodeu04.blob.core.windows.net^
-||sensonotificprodeu04.blob.core.windows.net^
-||sensoservicedeskprodeu04.blob.core.windows.net^
-||sensologcapturesprodeu05.blob.core.windows.net^
-||sensologrulesetsprodeu05.blob.core.windows.net^
-||sensoportmodstorprodeu05.blob.core.windows.net^
-||sensonotificprodeu05.blob.core.windows.net^
-||sensoservicedeskprodeu05.blob.core.windows.net^
-||sensomoduleprodna.blob.core.windows.net^
-||sensologcapturesprodna01.blob.core.windows.net^
-||sensologrulesetsprodna01.blob.core.windows.net^
-||sensoportmodulestorena01.blob.core.windows.net^
-||sensonotificprodna01.blob.core.windows.net^
-||sensoservicedeskprodna01.blob.core.windows.net^
-||sensologcapturesprodna02.blob.core.windows.net^
-||sensologrulesetsprodna02.blob.core.windows.net^
-||sensoportmodulestorena02.blob.core.windows.net^
-||sensonotificprodna02.blob.core.windows.net^
-||sensoservicedeskprodna02.blob.core.windows.net^
-||sensologcapturesprodna03.blob.core.windows.net^
-||sensologrulesetsprodna03.blob.core.windows.net^
-||sensoportmodulestorena03.blob.core.windows.net^
-||sensonotificprodna03.blob.core.windows.net^
-||sensoservicedeskprodna03.blob.core.windows.net^
-||sensologcapturesprodna04.blob.core.windows.net^
-||sensologrulesetsprodna04.blob.core.windows.net^
-||sensoportmodulestorena04.blob.core.windows.net^
-||sensonotificprodna04.blob.core.windows.net^
-||sensoservicedeskprodna04.blob.core.windows.net^
 ||sensologcapturesprodau01.blob.core.windows.net^
+||sensologcapturesprodeu01.blob.core.windows.net^
+||sensologcapturesprodeu02.blob.core.windows.net^
+||sensologcapturesprodeu03.blob.core.windows.net^
+||sensologcapturesprodeu04.blob.core.windows.net^
+||sensologcapturesprodeu05.blob.core.windows.net^
+||sensologcapturesprodna01.blob.core.windows.net^
+||sensologcapturesprodna02.blob.core.windows.net^
+||sensologcapturesprodna03.blob.core.windows.net^
+||sensologcapturesprodna04.blob.core.windows.net^
 ||sensologrulesetsprodau01.blob.core.windows.net^
-||sensoportmodulestoreau01.blob.core.windows.net^
+||sensologrulesetsprodeu01.blob.core.windows.net^
+||sensologrulesetsprodeu02.blob.core.windows.net^
+||sensologrulesetsprodeu03.blob.core.windows.net^
+||sensologrulesetsprodeu04.blob.core.windows.net^
+||sensologrulesetsprodeu05.blob.core.windows.net^
+||sensologrulesetsprodna01.blob.core.windows.net^
+||sensologrulesetsprodna02.blob.core.windows.net^
+||sensologrulesetsprodna03.blob.core.windows.net^
+||sensologrulesetsprodna04.blob.core.windows.net^
+||sensomoduleprodeu.blob.core.windows.net^
+||sensomoduleprodna.blob.core.windows.net^
 ||sensonotificprodau01.blob.core.windows.net^
+||sensonotificprodeu01.blob.core.windows.net^
+||sensonotificprodeu02.blob.core.windows.net^
+||sensonotificprodeu03.blob.core.windows.net^
+||sensonotificprodeu04.blob.core.windows.net^
+||sensonotificprodeu05.blob.core.windows.net^
+||sensonotificprodna01.blob.core.windows.net^
+||sensonotificprodna02.blob.core.windows.net^
+||sensonotificprodna03.blob.core.windows.net^
+||sensonotificprodna04.blob.core.windows.net^
+||sensoportmodstorprodeu02.blob.core.windows.net^
+||sensoportmodstorprodeu03.blob.core.windows.net^
+||sensoportmodstorprodeu04.blob.core.windows.net^
+||sensoportmodstorprodeu05.blob.core.windows.net^
+||sensoportmodulestoreau01.blob.core.windows.net^
+||sensoportmodulestoreeu01.blob.core.windows.net^
+||sensoportmodulestorena01.blob.core.windows.net^
+||sensoportmodulestorena02.blob.core.windows.net^
+||sensoportmodulestorena03.blob.core.windows.net^
+||sensoportmodulestorena04.blob.core.windows.net^
 ||sensoservicedeskprodau01.blob.core.windows.net^
-
-! DyKnow
-||dyknow.com^
-
-! Fortinet / FortiGuard
-||fortinet.com^
-||fortiguard.com^
-||forticlient.com^
-||forticloud.com^
-
-! Gopher
-||gopherforchrome.app^
-||amplifiedit.com^
-||gopher-buddy-prod.appspot.com^
-
-! Ativion Software
-||contentkeeper.com^
-||contentkeeper.io^
-||contentkeeper.net^
-||ck-express.com^
-||fastvue.co^
-||ativion.com^
-||ativionnx.com^
-||imperosoftware.com^
-||impero.com^
-||imperosoftware.co.uk^
-||netop.com^
-||netop.cn^
-
-! iboss
-||iboss.com^
-||ibosscloud.com^
-||iboss.si^
-||myiboss.net^
-
-! Blocksi
-||blocksi.net^
-||blocksicloud.com^
-||blocksicloud.net^
-||block.si^
-||blocksi-dns.appspot.com^
-||brm-v3.appspot.com^
-
-! Sophos
+||sensoservicedeskprodeu01.blob.core.windows.net^
+||sensoservicedeskprodeu02.blob.core.windows.net^
+||sensoservicedeskprodeu03.blob.core.windows.net^
+||sensoservicedeskprodeu04.blob.core.windows.net^
+||sensoservicedeskprodeu05.blob.core.windows.net^
+||sensoservicedeskprodna01.blob.core.windows.net^
+||sensoservicedeskprodna02.blob.core.windows.net^
+||sensoservicedeskprodna03.blob.core.windows.net^
+||sensoservicedeskprodna04.blob.core.windows.net^
+||sentry.pub.jamf.build^
+||sgtlabs.com^
+||smoothwall.cachefly.net^
+||smoothwall.cloud^
+||smoothwall.com^
 ||sophos.com^
-||sophosxl.com^
-||sophosxl.net^
 ||sophosupd.com^
 ||sophosupd.net^
-||hitmanpro.com^
-
-! Zscaler
-||zscalerone.net^
-||zscaler.com^
-
-! NetSupport
-||netsupportsoftware.com^
-||netsupportdna.com^
-||netsupportschool.com^
-
-! LearnSafe
-||learnsafe.com^
-
-! ManagedMethods
-||managedmethods.com^
-
-! Radix VISO
-||visomdm.com^
-||radix-int.com^
-
-! MDM Infrastructure (Jamf / Mosyle)
-||sentry.pub.jamf.build^
-||jamfcloud.com^
-||jamf.com^
-||jamfschool.com^
-||launchdarkly.com^
-||mosyle.com^
-||mosyle.net^
-
-! Life360
-||life360.com^
-||familysafetyproduction.com^
-||life360.pubnub.com^
-||life360-img.s3.amazonaws.com^
-||life360-wordpress.s3.amazonaws.com^
-||jiobit.com^
-||lf360.co^
-||life360-dev.tile-api.com^
-||life360.atlassian.net^
-||life360-location-dev.tile-api.com^
-||life360feedback.typeform.com^
-||life360-com-l360safetycenter.firebaseio.com^
-
-! Faronics
-||faronics.com^
-||deepfreeze.com^
-||faronicsdeploy.com^
-
-! mSpy
-||mspy.com^
-||mspy-app.co^
-||mspyonline.com^
-
-! FamiSafe
-||famisafe.wondershare.com^
-||famisafeapp.wondershare.com^
-||300624.com^
-||famisafe.com^
-||famisafe-b6807.firebaseio.com^
-||wondershare.cc^
-
-! Findmykids
-||findmykids.org^
-||findmychilds.org^
-||where-is-my-children.firebaseio.com^
-
-! Kidslox
-||kidslox.com^
-||kidslox.page.link^
-||kidslox.firebaseio.com^
-||kdlparentalcontrol.com^
-
-! ClevGuard / KidsGuard
-||clevguard.com^
-||clevguard.org^
-
-! Spyrix
+||sophosxl.com^
+||sophosxl.net^
+||sphirewall.net^
+||spyhuman.com^
 ||spyrix.com^
 ||spyrix.net^
 ||spyrix.pro^
-
-! Circle
-||meetcircle.com^
-||meetcircle-blue.com^
-||meetcircle-netgear.co^
-||meetcircle-sky.co^
-
-! Accountable2You
-||accountable2you.com^
-||accountable2you-android.firebaseio.com^
-
-! Microsoft Family Safety
-||family.microsoft.com^
-||location.family.microsoft.com^
-||mobileaggregator.family.microsoft.com^
-||safedriving.family.microsoft.com^
-
-! Geozilla
-||geozilla.com^
-||geozilla.autosmartins.com^
-||geozillafamily.firebaseio.com^
-||geozillafamily-c92d0.firebaseio.com^
-
-! FamilyOrbit
-||familyorbit.com^
-||familyorbit.net^
-
-! Eyezy
-||eyezy.com^
-||q12z.net^
-
-! Google Family Link
-! Note: Although blocking is incomplete, we are conservative to prevent overlap.
-||kidsmanagement-pa.googleapis.com^
-||kidsmanagement-pa.clients6.google.com^
-
-! General Parental Control
-||kiddoware.com^
-||mobileguardian.com^
+||tabpilot.com^
+||td-admin.appspot.com^
+||td-setup.appspot.com^
+||teacherdashboard.com^
 ||troomi.com^
-||netnanny.com^
-||contentwatch.com^
-||spyhuman.com^
-||mobicip.com^
-||kidlogger.net^
-||screentimelabs.com^
-||ourpact.com^
-||useboomerang.com^
-||mmguardian.com^
-||webwatcher.com^
-||flexispy.com^
-||hoverwatch.com^
-||umobix.com^
-||xnspy.com^
 ||truple.io^
-||kidgy.com^
-||seekdroid.com^
-||lockittight.com^
-||safenet.family^
-||discovenger.com^
-||canopy.us^
-
+||umobix.com^
+||useboomerang.com^
+||visomdm.com^
+||webwatcher.com^
+||where-is-my-children.firebaseio.com^
+||wondershare.cc^
+||x3-report-uploads.s3.us-west-2.amazonaws.com^
+||xnspy.com^
+||zscaler.com^
+||zscalerone.net^
