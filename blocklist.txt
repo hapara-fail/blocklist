@@ -5,8 +5,8 @@
 ! License: https://www.hapara.fail/license
 ! Issues: https://github.com/hapara-fail/blocklist/issues
 ! Expires: 3 days
-! Last modified: 27 Mar 2026 00:56 UTC
-! Version: 2026.0327.0056
+! Last modified: 27 Mar 2026 01:00 UTC
+! Version: 2026.0327.0100
 ! Syntax: Adblock Plus
 ! Number of entries: 279
 !
