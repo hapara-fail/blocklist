@@ -5,10 +5,10 @@
 ! License: https://www.hapara.fail/license
 ! Issues: https://github.com/hapara-fail/blocklist/issues
 ! Expires: 3 days
-! Last modified: 05 Mar 2026 21:41 UTC
-! Version: 2026.0305.2141
+! Last modified: 27 Mar 2026 00:45 UTC
+! Version: 2026.0327.0045
 ! Syntax: Adblock Plus
-! Number of entries: 286
+! Number of entries: 279
 !
 
 ! Hapara
@@ -87,7 +87,6 @@
 ||lsurl.me^
 ||lsclassroom.com^
 ||lsrelayaccess.com^
-||devices.lsmdm.com^
 ||lsagent.fcps.org^
 ||ls-papi.com^
 ||catchon.com^
@@ -100,9 +99,6 @@
 ||b16rt683ll.execute-api.us-west-2.amazonaws.com^
 ||p7nvu5it0k.execute-api.us-west-2.amazonaws.com^
 ||5rw61tcrl5.execute-api.us-west-2.amazonaws.com^
-||production-cp-01.lsfilter.com^
-||production-cb-01.lsfilter.com^
-||production-bp-01.lsfilter.com^
 ||lightspeed-realtime.ably.io^
 ||lightspeed-rest.ably.io^
 ||a-fallback-lightspeed.ably.io^
@@ -333,9 +329,6 @@
 
 ! Microsoft Family Safety
 ||family.microsoft.com^
-||location.family.microsoft.com^
-||mobileaggregator.family.microsoft.com^
-||safedriving.family.microsoft.com^
 
 ! Geozilla
 ||geozilla.com^
