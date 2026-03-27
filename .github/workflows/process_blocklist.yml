@@ -33,7 +33,7 @@ jobs:
 
       - name: Validate and Process Blocklist
         id: validate
-        run: python process_blocklist.py blocklist.txt --fix --sort --stats
+        run: python process_blocklist.py blocklist.txt --fix --stats
 
       - name: Commit and Push changes
         if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
