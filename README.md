@@ -106,7 +106,6 @@ The blocklist is organized by service category for transparency. It currently in
 #### Content Filtering & Security
 
 - Lightspeed Systems
-- Securly
 - iboss
 - Fortinet / FortiGuard
 - Zscaler
@@ -173,6 +172,7 @@ The following systems have implemented hardcoded failsafes. **Blocking these dom
 
 - GoGuardian
 - Lightspeed Systems
+- Securly
 
 ---
 
