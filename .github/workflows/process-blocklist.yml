@@ -6,13 +6,15 @@ on:
       - main
     paths:
       - "blocklist.txt"
-      - "scripts/process-blocklist.py"
+      - "scripts/process_blocklist.py"
+      - "scripts/test_process_blocklist.py"
   pull_request:
     branches:
       - main
     paths:
       - "blocklist.txt"
-      - "scripts/process-blocklist.py"
+      - "scripts/process_blocklist.py"
+      - "scripts/test_process_blocklist.py"
 
 permissions:
   contents: write
@@ -71,7 +73,7 @@ jobs:
         run: |
           echo "::group::Validate and process blocklist"
           set +e
-          python scripts/process-blocklist.py blocklist.txt --fix --stats
+          python scripts/process_blocklist.py blocklist.txt --fix --stats
           status=$?
           echo "::endgroup::"
           exit "${status}"

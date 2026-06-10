@@ -5,12 +5,12 @@ Validates AdBlock Plus format blocklists, emits GitHub Actions annotations,
 writes a step summary, and atomically updates file metadata on success.
 
 Usage:
-  python scripts/process-blocklist.py [file ...]
-  python scripts/process-blocklist.py blocklist.txt --dry-run
-  python scripts/process-blocklist.py *.txt --fix       # auto-fix safe issues
-  python scripts/process-blocklist.py --strict          # warnings become errors
-  python scripts/process-blocklist.py --sort            # sort rules alphabetically
-  python scripts/process-blocklist.py --stats           # print detailed statistics
+  python scripts/process_blocklist.py [file ...]
+  python scripts/process_blocklist.py blocklist.txt --dry-run
+  python scripts/process_blocklist.py *.txt --fix       # auto-fix safe issues
+  python scripts/process_blocklist.py --strict          # warnings become errors
+  python scripts/process_blocklist.py --sort            # sort rules alphabetically
+  python scripts/process_blocklist.py --stats           # print detailed statistics
 """
 
 from __future__ import annotations
@@ -142,18 +142,19 @@ def write_step_summary(md: str) -> None:
 # Rule classification
 # ──────────────────────────────────────────────────────────────────────────────
 
-# Valid AdBlock option modifiers after `$`
+# Valid AdBlock option modifiers after `$`. Store canonical keys without a
+# leading "~"; inverse options are normalized while validating.
 VALID_OPTIONS: Set[str] = {
     "script", "image", "stylesheet", "object", "xmlhttprequest", "object-subrequest",
     "subdocument", "document", "elemhide", "generichide", "genericblock", "other",
-    "third-party", "first-party", "~third-party", "~first-party", "all",
-    "popup", "media", "font", "websocket", "webrtc", "ping", "csp",
-    "important", "badfilter", "redirect", "redirect-rule", "denyallow",
+    "third-party", "first-party", "all", "popup", "media", "font", "websocket",
+    "webrtc", "ping", "csp", "rewrite", "important", "badfilter", "redirect",
+    "redirect-rule", "denyallow",
     "domain", "app", "network", "permissions", "stealth", "cookie",
     "removeparam", "removeheader", "header", "method", "to", "from",
     "match-case", "replace", "urltransform",
     # common shorthand
-    "3p", "1p", "~3p", "~1p", "xhr",
+    "3p", "1p", "xhr",
 }
 
 # Known TLDs for domain validation (subset of common ones)
@@ -165,15 +166,8 @@ _KNOWN_TLDS: Set[str] = {
     "edu", "gov", "mil", "int",
 }
 
-# Regex to identify rule categories
-_NETWORK_BLOCK  = re.compile(r'^\|\|.+')
-_NETWORK_ALLOW  = re.compile(r'^@@\|\|.+')
-_COSMETIC       = re.compile(r'^.+##.+')
-_COSMETIC_ALLOW = re.compile(r'^.+#@#.+')
-_EXTENDED_CSS   = re.compile(r'^.+#\?#.+')
-_SCRIPTLET      = re.compile(r'^.+#\$#.+')
-_HTML_FILTER    = re.compile(r'^.+\$\$.*')
-_COMMENT        = re.compile(r'^[!#]')
+# Regex to identify metadata/comment lines
+_COMMENT        = re.compile(r'^!')
 _ADBLOCK_HDR    = re.compile(r'^\[Adblock', re.IGNORECASE)
 
 # Header metadata patterns
@@ -186,53 +180,167 @@ HEADER_PATTERNS: Dict[str, Pattern] = {
 # Pattern for detecting IP address rules (hosts-file format mixed in)
 _IP_RULE = re.compile(r'^(0\.0\.0\.0|127\.0\.0\.1)\s+\S+')
 
-# Pattern for detecting regex rules
-_REGEX_RULE = re.compile(r'^/.+/$')
+# Pattern for DNS-compatible hostname rules
+_DNS_HOSTNAME_RE = re.compile(
+    r'^(?:[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?\.)+'
+    r'(?:[A-Za-z]{2,63}|xn--[A-Za-z0-9-]{2,59})$'
+)
+
+_CONTENT_MARKERS: Tuple[Tuple[str, str, bool], ...] = (
+    ("#@$#", "scriptlet-allow", True),
+    ("#$#", "scriptlet", False),
+    ("#@#", "cosmetic-allow", True),
+    ("#?#", "extended-css", False),
+    ("##", "cosmetic", False),
+    ("$$", "html-filter", False),
+)
+
+_OPTION_ALIASES = {
+    "3p": "third-party",
+    "1p": "first-party",
+    "xhr": "xmlhttprequest",
+}
+
+
+@dataclass(frozen=True)
+class ParsedRule:
+    raw: str
+    category: str
+    is_exception: bool = False
+    pattern: str = ""
+    options: Tuple[str, ...] = ()
+    dns_compatible: bool = False
+    marker: str = ""
+    domain: Optional[str] = None
+    is_regex: bool = False
+
+
+def _is_hash_comment(line: str) -> bool:
+    """Treat legacy # comments as comments unless they are ABP content rules."""
+    if not line.startswith('#'):
+        return False
+    return not any(marker in line for marker, _, _ in _CONTENT_MARKERS)
+
+
+def _split_options(rule_body: str) -> Tuple[str, Tuple[str, ...], bool]:
+    """Split a network rule into pattern/options and identify ABP regex rules."""
+    if rule_body.startswith('/'):
+        escaped = False
+        closing_idx = -1
+        for idx in range(1, len(rule_body)):
+            ch = rule_body[idx]
+            if ch == '\\' and not escaped:
+                escaped = True
+                continue
+            if ch == '/' and not escaped:
+                closing_idx = idx
+            escaped = False
+
+        if closing_idx > 0:
+            if closing_idx == len(rule_body) - 1:
+                return rule_body, (), True
+            if rule_body[closing_idx + 1] == '$':
+                options = tuple(
+                    opt.strip()
+                    for opt in rule_body[closing_idx + 2:].split(',')
+                    if opt.strip()
+                )
+                return rule_body[:closing_idx + 1], options, True
+
+    dollar_idx = rule_body.rfind('$')
+    if dollar_idx > 0:
+        options = tuple(
+            opt.strip()
+            for opt in rule_body[dollar_idx + 1:].split(',')
+            if opt.strip()
+        )
+        return rule_body[:dollar_idx], options, False
+
+    return rule_body, (), False
+
+
+def _extract_dns_domain(pattern: str) -> Optional[str]:
+    """Return hostname when pattern is the DNS-safe ABP domain-anchor shape."""
+    if not (pattern.startswith('||') and pattern.endswith('^')):
+        return None
+    domain = pattern[2:-1]
+    if not domain:
+        return None
+    if any(ch in domain for ch in ('/', '*', ':', '|', '^')) or any(ch.isspace() for ch in domain):
+        return None
+    if not _DNS_HOSTNAME_RE.match(domain):
+        return None
+    return domain.lower()
+
+
+def _extract_domain_anchor_body(pattern: str) -> Optional[str]:
+    """Return the body of a ||domain^ style pattern, even if malformed."""
+    if not (pattern.startswith('||') and pattern.endswith('^')):
+        return None
+    return pattern[2:-1].lower()
+
+
+def parse_rule(line: str) -> Optional[ParsedRule]:
+    """
+    Parse enough ABP syntax to distinguish valid browser-level rules from the
+    narrower DNS-compatible subset this repository publishes.
+    """
+    if not line:
+        return None
+    if _COMMENT.match(line) or _ADBLOCK_HDR.match(line) or _is_hash_comment(line):
+        return None
+
+    for marker, category, is_exception in _CONTENT_MARKERS:
+        if marker in line:
+            selector = line.split(marker, 1)[1]
+            return ParsedRule(
+                raw=line,
+                category=category,
+                is_exception=is_exception,
+                pattern=selector,
+                marker=marker,
+                dns_compatible=False,
+            )
+
+    is_exception = line.startswith('@@')
+    body = line[2:] if is_exception else line
+    pattern, options, is_regex = _split_options(body)
+    domain = _extract_dns_domain(pattern)
+    dns_compatible = domain is not None and not options and not is_regex
+
+    if is_exception:
+        category = "allow"
+    elif is_regex:
+        category = "regex"
+    else:
+        category = "block"
+
+    return ParsedRule(
+        raw=line,
+        category=category,
+        is_exception=is_exception,
+        pattern=pattern,
+        options=options,
+        dns_compatible=dns_compatible,
+        domain=domain,
+        is_regex=is_regex,
+    )
 
 
 def classify_rule(line: str) -> Optional[str]:
-    """
-    Return a human-readable category string, or None if not a rule.
-    Order matters -- more specific patterns first.
-    """
-    if not line or _COMMENT.match(line) or _ADBLOCK_HDR.match(line):
-        return None
-    if _NETWORK_ALLOW.match(line):
-        return "allow"
-    if _NETWORK_BLOCK.match(line):
-        return "block"
-    if _COSMETIC_ALLOW.match(line):
-        return "cosmetic-allow"
-    if _SCRIPTLET.match(line):
-        return "scriptlet"
-    if _EXTENDED_CSS.match(line):
-        return "extended-css"
-    if _COSMETIC.match(line):
-        return "cosmetic"
-    if _REGEX_RULE.match(line):
-        return "regex"
-    return "other"
+    """Return a human-readable category string, or None if not a rule."""
+    parsed = parse_rule(line)
+    return parsed.category if parsed else None
 
 
 def is_rule(line: str) -> bool:
-    return classify_rule(line) is not None
+    return parse_rule(line) is not None
 
 
 def extract_domain(rule: str) -> Optional[str]:
     """Extract the domain from a network block/allow rule like ||domain.com^."""
-    if rule.startswith('@@||'):
-        body = rule[4:]
-    elif rule.startswith('||'):
-        body = rule[2:]
-    else:
-        return None
-    # Strip trailing ^ and $options
-    body = body.split('$')[0]
-    body = body.rstrip('^').rstrip('*')
-    # Only return if it looks like a domain
-    if body and '/' not in body and ' ' not in body:
-        return body.lower()
-    return None
+    parsed = parse_rule(rule)
+    return parsed.domain if parsed else None
 
 
 # ──────────────────────────────────────────────────────────────────────────────
@@ -367,7 +475,7 @@ class BlocklistValidator:
         self._last_line_blank = False
 
         # Track comment lines
-        if _COMMENT.match(stripped) or _ADBLOCK_HDR.match(stripped):
+        if _COMMENT.match(stripped) or _ADBLOCK_HDR.match(stripped) or _is_hash_comment(stripped):
             self.result.comment_lines += 1
 
         # Check: Hosts-file format mixed in (0.0.0.0 or 127.0.0.1)
@@ -377,12 +485,14 @@ class BlocklistValidator:
                        code="E003")
             return
 
+        parsed = parse_rule(stripped)
+
         # Skip non-rules for rule-specific checks
-        if not is_rule(stripped):
+        if parsed is None:
             return
 
         self._first_rule_seen = True
-        category = classify_rule(stripped)
+        category = parsed.category
 
         # -- Rule-specific checks ----------------------------------------------
 
@@ -392,20 +502,18 @@ class BlocklistValidator:
                        "Rule has trailing whitespace.",
                        fixable=True, code="W003")
 
-        # Check: Protocol in network rule
-        if category in ("block", "allow") and '://' in stripped:
+        # Check: Spaces inside a non-regex network pattern. ABP options such as
+        # csp= may contain spaces, so validate the parsed pattern only.
+        if category in ("block", "allow", "regex") and not parsed.is_regex and ' ' in parsed.pattern:
             self._diag("error", line_num,
-                       "Network rule contains protocol (http/https). Remove '://'.",
-                       code="E004")
-
-        # Check: Spaces inside a rule (invalid in network rules)
-        if category in ("block", "allow") and ' ' in stripped:
-            self._diag("error", line_num,
-                       f"Rule contains illegal spaces: '{stripped}'",
+                       f"Network rule pattern contains illegal spaces: '{parsed.pattern}'",
                        code="E005")
 
         # Check: Empty / stub rules
-        if stripped in ('||', '@@', '||^', '@@^', '##', '#@#', '##.', '#@#.'):
+        if stripped in (
+            '||', '@@', '@@||', '||^', '@@^', '@@||^',
+            '##', '#@#', '#?#', '#$#', '#@$#', '$$', '##.', '#@#.',
+        ):
             self._diag("error", line_num,
                        f"Rule is empty or incomplete: '{stripped}'",
                        code="E006")
@@ -418,34 +526,37 @@ class BlocklistValidator:
                        code="E007")
 
         # Check: Validate $options modifier
-        if '$' in stripped and category in ("block", "allow"):
-            self._validate_options(stripped, line_num)
+        if parsed.options:
+            self._validate_options(parsed, line_num)
 
         # Check: Duplicate detection (normalised to lowercase for domains)
         normalised = stripped.lower() if category in ("block", "allow") else stripped
         if normalised in self._seen_rules:
             self._diag("error", line_num,
                        f"Duplicate rule: '{stripped}'",
-                       code="E008")
+                       fixable=True, code="E008")
         else:
             self._seen_rules.add(normalised)
             self.result.rule_counts[category] = \
                 self.result.rule_counts.get(category, 0) + 1
 
         # Check: Missing separator ^ on domain rules (warning)
-        if (category == "block"
-                and stripped.startswith('||')
-                and '$' not in stripped
-                and not stripped.endswith('^')
-                and '/' not in stripped[2:]
-                and '*' not in stripped[2:]):
+        missing_simple_separator = (
+            category == "block"
+            and stripped.startswith('||')
+            and '$' not in stripped
+            and not stripped.endswith('^')
+            and '/' not in stripped[2:]
+            and '*' not in stripped[2:]
+        )
+        if missing_simple_separator:
             self._diag("warning", line_num,
                        f"Network rule missing '^' separator at end: '{stripped}'",
                        fixable=True, code="W004")
 
         # Check: Redundancy -- ||sub.domain^ when ||domain^ already exists
-        if category == "block" and stripped.endswith('^') and '$' not in stripped:
-            domain = stripped[2:-1]  # strip || and ^
+        if category == "block" and parsed.dns_compatible and parsed.domain:
+            domain = parsed.domain
             parts = domain.split('.')
             for i in range(1, len(parts) - 1):
                 parent = '.'.join(parts[i:])
@@ -457,37 +568,41 @@ class BlocklistValidator:
             self._blocked_domains.add(domain)
 
         # Check: Cosmetic rule with empty selector
-        if category in ("cosmetic", "cosmetic-allow"):
-            sep = '##' if category == "cosmetic" else '#@#'
-            parts = stripped.split(sep, 1)
-            if len(parts) == 2 and not parts[1].strip():
+        if category in ("cosmetic", "cosmetic-allow", "extended-css", "scriptlet", "scriptlet-allow", "html-filter"):
+            if not parsed.pattern.strip():
                 self._diag("error", line_num,
-                           f"Cosmetic rule has empty selector after '{sep}'.",
+                           f"Content rule has empty body after '{parsed.marker}'.",
                            code="E009")
 
         # Check: Domain with consecutive dots (e.g. ||example..com^)
         if category in ("block", "allow"):
-            domain = extract_domain(stripped)
-            if domain:
-                if '..' in domain:
+            anchor_body = _extract_domain_anchor_body(parsed.pattern)
+            if anchor_body:
+                if '..' in anchor_body:
                     self._diag("error", line_num,
-                               f"Domain contains consecutive dots: '{domain}'",
+                               f"Domain contains consecutive dots: '{anchor_body}'",
                                code="E010")
-                # Check: Domain with trailing dot
-                if domain.endswith('.'):
+                if anchor_body.endswith('.'):
                     self._diag("warning", line_num,
-                               f"Domain has trailing dot: '{domain}'",
+                               f"Domain has trailing dot: '{anchor_body}'",
                                code="W005")
+
+            if parsed.domain:
+                domain = parsed.domain
                 # Track TLD distribution
                 tld = domain.rsplit('.', 1)[-1] if '.' in domain else ''
                 if tld:
                     self.result.tld_distribution[tld] = \
                         self.result.tld_distribution.get(tld, 0) + 1
                 self.result.domain_list.append(domain)
-
+            elif anchor_body:
+                if not any(ch in anchor_body for ch in ('/', '*', ':', '|', '^')) and not any(ch.isspace() for ch in anchor_body):
+                    self._diag("error", line_num,
+                               f"Invalid DNS hostname in domain-anchor rule: '{anchor_body}'",
+                               code="E016")
         # Check: Regex rule validation
-        if category == "regex":
-            inner = stripped[1:-1]
+        if parsed.is_regex:
+            inner = parsed.pattern[1:-1]
             try:
                 re.compile(inner)
             except re.error as exc:
@@ -495,16 +610,26 @@ class BlocklistValidator:
                            f"Invalid regex pattern: {exc}",
                            code="E011")
 
-    def _validate_options(self, rule: str, line_num: int) -> None:
+        # Check: DNS compatibility. Broader ABP syntax is parsed, but this
+        # repository publishes a DNS-focused list.
+        if not parsed.dns_compatible and not missing_simple_separator:
+            if category in ("cosmetic", "cosmetic-allow", "extended-css", "scriptlet", "scriptlet-allow", "html-filter"):
+                self._diag("error", line_num,
+                           f"DNS-incompatible ABP content rule '{stripped}'. "
+                           "Content, style, snippet, and HTML filters require browser-level filtering.",
+                           code="E014")
+            else:
+                self._diag("error", line_num,
+                           f"DNS-incompatible network rule '{stripped}'. "
+                           "DNS blocklists can only enforce '||hostname^' and '@@||hostname^' rules without options.",
+                           code="E015")
+
+    def _validate_options(self, parsed: ParsedRule, line_num: int) -> None:
         """Validate the $option,list part of a network rule."""
-        dollar_idx = rule.rfind('$')
-        if dollar_idx == -1:
-            return
-        options_str = rule[dollar_idx + 1:]
-        raw_options = [o.strip() for o in options_str.split(',') if o.strip()]
+        raw_options = parsed.options
 
         for opt in raw_options:
-            key = opt.lstrip('~').split('=')[0].lower()
+            key = self._option_key(opt)
             if key and key not in VALID_OPTIONS:
                 self._diag("warning", line_num,
                            f"Unknown or non-standard option '${opt}'. "
@@ -512,15 +637,18 @@ class BlocklistValidator:
                            code="W006")
 
         # Check for conflicting options
-        option_keys = [o.lstrip('~').split('=')[0].lower() for o in raw_options]
-        if 'third-party' in option_keys and '~third-party' in option_keys:
+        positive = {self._option_key(o) for o in raw_options if not o.startswith('~')}
+        negative = {self._option_key(o) for o in raw_options if o.startswith('~')}
+        for key in sorted(positive & negative):
             self._diag("error", line_num,
-                       "Conflicting options: 'third-party' and '~third-party' on same rule.",
+                       f"Conflicting options: '{key}' and '~{key}' on same rule.",
                        code="E012")
-        if 'first-party' in option_keys and '~first-party' in option_keys:
-            self._diag("error", line_num,
-                       "Conflicting options: 'first-party' and '~first-party' on same rule.",
-                       code="E013")
+
+    @staticmethod
+    def _option_key(option: str) -> str:
+        raw_key = option[1:] if option.startswith('~') else option
+        key = raw_key.split('=', 1)[0].lower()
+        return _OPTION_ALIASES.get(key, key)
 
 
 # ──────────────────────────────────────────────────────────────────────────────
@@ -539,7 +667,12 @@ def sort_rules(lines: List[str]) -> List[str]:
 
     for line in lines:
         stripped = line.rstrip('\n').rstrip('\r').strip()
-        if in_header and (not stripped or _COMMENT.match(stripped) or _ADBLOCK_HDR.match(stripped)):
+        if in_header and (
+            not stripped
+            or _COMMENT.match(stripped)
+            or _ADBLOCK_HDR.match(stripped)
+            or _is_hash_comment(stripped)
+        ):
             header.append(line)
         else:
             in_header = False
@@ -737,6 +870,8 @@ def process_file(
         "cosmetic-allow": "Cosmetic allow",
         "extended-css": "Extended CSS",
         "scriptlet": "Scriptlet",
+        "scriptlet-allow": "Scriptlet allow",
+        "html-filter": "HTML filter",
         "regex": "Regex",
         "other": "Other",
     }
@@ -795,6 +930,27 @@ def process_file(
         if dedup_count:
             print(_c(f"  Removed {dedup_count} duplicate rule(s).", Color.GREEN))
             result.fixed_count += dedup_count
+
+    # -- Revalidate after mutating passes --------------------------------------
+    if fix or sort:
+        fixed_count = result.fixed_count
+        post_validator = BlocklistValidator(strict=strict)
+        post_validator.reset(file_path)
+        for i, line in enumerate(working_lines, 1):
+            post_validator.validate_line(line, i)
+        result = post_validator.result
+        result.fixed_count = fixed_count
+
+        if result.errors:
+            print(_c(f"\n  Remaining errors after fixes ({len(result.errors)}):", Color.RED, Color.BOLD))
+            for e in result.errors:
+                tag = f" [{e.code}]" if e.code else ""
+                print(f"    line {e.line:>5}: {e.message}{tag}")
+            print(_c(
+                f"\n  [FAIL] Validation FAILED -- {len(result.errors)} error(s) remain after fixes.",
+                Color.RED, Color.BOLD,
+            ))
+            return result
 
     # -- Success ---------------------------------------------------------------
     ts_str, ver_str = get_timestamps()
@@ -915,6 +1071,8 @@ def build_step_summary(
         "cosmetic-allow": "Cosmetic allow",
         "extended-css": "Extended CSS",
         "scriptlet": "Scriptlet",
+        "scriptlet-allow": "Scriptlet allow",
+        "html-filter": "HTML filter",
         "regex": "Regex",
         "other": "Other",
     }
@@ -993,7 +1151,7 @@ def build_step_summary(
     # -- Footer ----------------------------------------------------------------
     now = datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')
     lines.append(f"\n---")
-    lines.append(f"*Generated by `scripts/process-blocklist.py` at {now}*")
+    lines.append(f"*Generated by `scripts/process_blocklist.py` at {now}*")
 
     return "\n".join(lines)
 
