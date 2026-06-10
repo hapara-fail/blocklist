@@ -21,6 +21,8 @@ If you want to block a new monitoring service, filter, or tracker:
 If a monitoring or filtering system has updated to block all internet access when its domains are unreachable (a "failsafe"):
 
 - **[Click here to open a Patched System / Failsafe Issue](https://github.com/hapara-fail/blocklist/issues/new?template=patched.yml)**
+- Patch status can vary by deployment. A failsafe may only affect some users because of staged rollouts, A/B testing, or administrator opt-in features.
+- We may not have identified every patched system yet. Please report suspected failsafes so we can document them accurately.
 - **Crucial:** Please provide the exact extension or software version number. This helps us track which updates introduced the failsafe.
 - Include details about the resulting behavior (e.g., a generic browser "No Internet" error versus a specific block page from the vendor).
 

@@ -171,6 +171,8 @@ The blocklist is organized by service category for transparency. It currently in
 
 The following systems have implemented hardcoded failsafes. **Blocking these domains will result in a total loss of web browsing capabilities** rather than a successful bypass, as they sever the internet connection when server communication fails.
 
+Patch status can vary by deployment. A system listed here may not be patched for every user because of staged rollouts, A/B testing, or administrator opt-in features. There may also be patched systems we have not identified yet; if you encounter one, please [report it](https://github.com/hapara-fail/blocklist/issues/new?template=patched.yml).
+
 - GoGuardian
 - Lightspeed Systems
 - Securly
