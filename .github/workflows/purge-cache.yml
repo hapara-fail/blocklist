@@ -1,0 +1,26 @@
+name: Purge Cache
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "README.md"
+
+permissions:
+  contents: read
+
+jobs:
+  purge:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Purge README cache
+        shell: bash
+        run: |
+          echo "::group::Purge README cache"
+          url="https://purge.jsdelivr.net/gh/hapara-fail/blocklist@main/README.md"
+          echo "Purging ${url}"
+          curl --fail --show-error --silent --output /dev/null "${url}"
+          echo "README cache purge completed."
+          echo "::endgroup::"
