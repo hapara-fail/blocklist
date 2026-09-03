@@ -189,6 +189,7 @@
 
 ! DyKnow
 ||dyknow.com^
+||dyknow-data-prd.s3.amazonaws.com^
 
 ! Fortinet / FortiGuard
 ||fortinet.com^
@@ -374,4 +375,3 @@
 ||safenet.family^
 ||discovenger.com^
 ||canopy.us^
-
