@@ -35,38 +35,6 @@ jobs:
           python-version: "3.x"
           check-latest: true
 
-      - name: Detect blocklist changes
-        id: detect
-        shell: bash
-        run: |
-          echo "::group::Detect blocklist changes"
-          incoming_blocklist_changed=false
-
-          if [[ "${{ github.event_name }}" == "push" ]]; then
-            if [[ "${{ github.event.before }}" == "0000000000000000000000000000000000000000" ]]; then
-              changed_files="$(git diff-tree --no-commit-id --name-only -r --root "${{ github.sha }}")"
-            else
-              changed_files="$(git diff --name-only "${{ github.event.before }}" "${{ github.sha }}")"
-            fi
-
-            echo "Changed files in incoming push:"
-            if [[ -n "${changed_files}" ]]; then
-              echo "${changed_files}"
-            else
-              echo "(none detected)"
-            fi
-
-            if grep -qx "blocklist.txt" <<< "${changed_files}"; then
-              incoming_blocklist_changed=true
-            fi
-          else
-            echo "Pull request run: incoming push cache decision is not applicable."
-          fi
-
-          echo "Incoming push changed blocklist.txt: ${incoming_blocklist_changed}"
-          echo "incoming_blocklist_changed=${incoming_blocklist_changed}" >> "$GITHUB_OUTPUT"
-          echo "::endgroup::"
-
       - name: Validate and process blocklist
         id: validate
         shell: bash
@@ -115,28 +83,3 @@ jobs:
             echo "Commit created: false"
             echo "commit_created=false" >> "$GITHUB_OUTPUT"
           fi
-
-      - name: Purge blocklist cache
-        if: github.event_name == 'push'
-        shell: bash
-        run: |
-          echo "::group::Purge blocklist cache"
-          should_purge=false
-
-          if [[ "${{ steps.detect.outputs.incoming_blocklist_changed }}" == "true" || "${{ steps.processing-result.outputs.processed_blocklist_changed }}" == "true" ]]; then
-            should_purge=true
-          fi
-
-          echo "Incoming push changed blocklist.txt: ${{ steps.detect.outputs.incoming_blocklist_changed }}"
-          echo "Processing modified blocklist.txt: ${{ steps.processing-result.outputs.processed_blocklist_changed }}"
-          echo "Commit created: ${{ steps.commit.outputs.commit_created }}"
-
-          if [[ "${should_purge}" == "true" ]]; then
-            url="https://purge.jsdelivr.net/gh/hapara-fail/blocklist@main/blocklist.txt"
-            echo "Purging ${url}"
-            curl --fail --show-error --silent --output /dev/null "${url}"
-            echo "Blocklist cache purge completed."
-          else
-            echo "Blocklist cache purge skipped."
-          fi
-          echo "::endgroup::"
