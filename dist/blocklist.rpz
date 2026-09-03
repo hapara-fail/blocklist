@@ -3,8 +3,8 @@
 ; Homepage: https://www.hapara.fail/
 ; Repository: https://github.com/hapara-fail/blocklist
 ; License: GPL-3.0-only (https://github.com/hapara-fail/blocklist/blob/main/LICENSE)
-; Generated: 2026-09-03T20:00:00Z
-; Version: 202609032000
+; Generated: 2026-09-03T20:13:13Z
+; Version: 202609032013
 ; Update interval: 3 days
 ; Format: DNS Response Policy Zone (NXDOMAIN)
 ; Blocking entries: 279
@@ -13,7 +13,7 @@
 $ORIGIN rpz.hapara.fail.
 $TTL 1h
 @ IN SOA localhost. hostmaster.hapara.fail. (
-    1788465600 ; serial (Unix timestamp)
+    1788466393 ; serial (Unix timestamp)
     1h         ; refresh
     15m        ; retry
     30d        ; expire

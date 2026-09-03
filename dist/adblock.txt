@@ -4,8 +4,8 @@
 ! Homepage: https://www.hapara.fail/
 ! License: https://github.com/hapara-fail/blocklist/blob/main/LICENSE
 ! Expires: 3 days
-! Version: 202609032000
-! Last modified: 2026-09-03T20:00:00Z
+! Version: 202609032013
+! Last modified: 2026-09-03T20:13:13Z
 ! Format: Adblock Plus / AdGuard / uBlock Origin
 ! Number of entries: 280
 ! Generated file; edit data/blocklist.csv instead.

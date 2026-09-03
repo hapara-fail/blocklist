@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
-  "list_version": "202609032000",
-  "generated_at": "2026-09-03T20:00:00Z",
+  "list_version": "202609032013",
+  "generated_at": "2026-09-03T20:13:13Z",
   "update_interval_hours": 72,
   "project": {
     "name": "hapara.fail Blocklist",
