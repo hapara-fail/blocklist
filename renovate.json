@@ -8,5 +8,15 @@
   "enabledManagers": [
     "github-actions"
   ],
-  "dependencyDashboard": false
+  "dependencyDashboard": false,
+  "packageRules": [
+    {
+      "description": "Automerge GitHub Actions updates",
+      "matchManagers": [
+        "github-actions"
+      ],
+      "automerge": true,
+      "automergeType": "pr"
+    }
+  ]
 }
