@@ -1,85 +1,64 @@
-# Contributing Guidelines
+# Contributing to the hapara.fail blocklist
 
-First off, thank you for considering contributing to the **hapara.fail blocklist**. This project relies on community intelligence to stay ahead of the constantly shifting infrastructure of surveillance and filtering companies.
+Thank you for helping keep the list accurate. Contributions should be narrow, evidence-based, and mindful that blocking shared infrastructure can disrupt unrelated services.
 
-Whether you are identifying new tracking domains, fixing false positives, or simply requesting that a new service be targeted, your help is vital to maintaining digital autonomy for students.
+## Report an issue
 
-## 🐛 Reporting Issues
+- [Request a service or domain addition](https://github.com/hapara-fail/blocklist/issues/new?template=addition.yml)
+- [Report a false positive or removal](https://github.com/hapara-fail/blocklist/issues/new?template=removal.yml)
+- [Report patched/failsafe behavior](https://github.com/hapara-fail/blocklist/issues/new?template=patched.yml)
 
-We have simplified our reporting process. Please use the direct links below to **open an issue** using the correct template.
+Include exact domains, product and version information, observed behavior, and non-sensitive evidence when available. Do not publish private student data, credentials, or confidential network details.
 
-### 1. Requesting Blocks (Services or Domains)
+## Submit a blocklist change
 
-If you want to block a new monitoring service, filter, or tracker:
+Edit only [`data/blocklist.csv`](data/blocklist.csv). The generated `dist/` files and legacy `blocklist.txt` are updated automatically after a change reaches `main`.
 
-- **[Click here to open a Service / Domain Addition Issue](https://github.com/hapara-fail/blocklist/issues/new?template=addition.yml)**
-- **You do NOT need to know the specific domains.** You can simply request that we investigate a specific service (e.g., "Please add Impero Classroom").
-- If you _do_ know the domains, please list them to speed up the process.
+1. Fork the repository and create a focused branch.
+2. Add or update one CSV row per hostname.
+3. Keep the canonical rows grouped by category/service when practical; generated files are always domain-sorted.
+4. Run validation and tests.
+5. Commit the canonical change and open a pull request with the reason and evidence.
 
-### 2. Reporting Patched Systems (Failsafes)
+The exact header is:
 
-If a monitoring or filtering system has updated to block all internet access when its domains are unreachable (a "failsafe"):
+```csv
+action,domain,service,category,description,source,added
+```
 
-- **[Click here to open a Patched System / Failsafe Issue](https://github.com/hapara-fail/blocklist/issues/new?template=patched.yml)**
-- Patch status can vary by deployment. A failsafe may only affect some users because of staged rollouts, A/B testing, or administrator opt-in features.
-- We may not have identified every patched system yet. Please report suspected failsafes so we can document them accurately.
-- **Crucial:** Please provide the exact extension or software version number. This helps us track which updates introduced the failsafe.
-- Include details about the resulting behavior (e.g., a generic browser "No Internet" error versus a specific block page from the vendor).
+Required values:
 
-### 3. Reporting False Positives (Broken Sites)
+- `action`: `block` or, for an intentional Adblock-only exception, `allow`.
+- `domain`: hostname only. Do not add `https://`, paths, ports, wildcards, leading dots, trailing root dots, or Adblock syntax.
+- `service`: recognizable vendor or product name.
+- `category`: `monitoring`, `filtering`, `device-management`, `parental-control`, or `other`.
 
-If a legitimate educational resource, school portal, or essential website is broken because of this blocklist:
+Optional values:
 
-- **[Click here to open a False Positive / Removal Issue](https://github.com/hapara-fail/blocklist/issues/new?template=removal.yml)**
-- **Crucial:** Please provide as much detail as possible about _what_ is broken and _which_ domain is causing it (if you know).
-- Screenshots of error messages or network logs are extremely helpful.
+- `description`: concise context or purpose. Quote the CSV field if it contains a comma.
+- `source`: an absolute HTTP(S) evidence/provenance URL.
+- `added`: the known addition date as `YYYY-MM-DD`.
 
----
+Example:
 
-## 🛠️ Submitting Changes (Pull Requests)
+```csv
+block,telemetry.example,Example Classroom,monitoring,Telemetry endpoint,https://example.org/evidence,2026-09-03
+```
 
-We welcome direct contributions to the blocklist. If you are comfortable editing the file directly, please follow these guidelines to ensure your Pull Request (PR) is accepted.
+The generator normalizes case and internationalized names, but duplicate domains after normalization are errors. A canonical domain means “block the apex and all subdomains” in formats that can express that behavior. Plain-domain and hosts consumers generally match only the exact hostname, so add specific subdomains when those users must receive them.
 
-### 1. Blocklist Format
+## Validate locally
 
-The `blocklist.txt` file uses **Adblock Plus (ABP) syntax**. All entries must strictly follow this format to ensure compatibility with Pi-hole, AdGuard, and uBlock Origin.
+Python 3.13 is used in CI:
 
-- **Correct Syntax:** `||domain.com^`
-- **Incorrect:** `domain.com`, `0.0.0.0 domain.com`, `http://domain.com`
+```sh
+python -m pip install -r requirements.txt
+python scripts/generate_blocklist.py --validate-only
+python -m unittest discover -s scripts -p "test_*.py" -v
+```
 
-**Rules for Entries:**
+Maintainers can generate all published formats with `python scripts/generate_blocklist.py`. CI additionally checks the RPZ with `named-checkzone`, dnsmasq with `dnsmasq --test`, and Unbound with `unbound-checkconf`.
 
-- **One domain per line.**
-- **No comments** inline with domains (unless absolutely necessary for section headers).
-- **Categorization:** Please place new domains under the correct Vendor Header (e.g., `! GoGuardian`, `! Lightspeed`). If adding a new vendor, create a new header using `! Vendor Name`.
+## Code of conduct and license
 
-### 2. How to Contribute
-
-1.  **Fork** the repository to your own GitHub account.
-2.  **Create a Branch** for your specific change (e.g., `add-impero-domains` or `fix-canvas-login`).
-3.  **Add/Remove Domains** in `blocklist.txt` using the syntax above.
-4.  **Verify** your changes:
-    - Ensure there are no trailing spaces.
-    - Ensure you haven't accidentally deleted unrelated domains.
-5.  **Commit** your changes with a clear message:
-    - _Good:_ "Add telemetry endpoints for Lightspeed Filter"
-    - _Bad:_ "update list"
-6.  **Push** to your branch and open a **Pull Request**.
-
----
-
-## 🔍 Tips for Identifying Domains
-
-Finding the right domain to block can be tricky. Here are a few tips:
-
-- **Browser Developer Tools:** Press `F12` > `Network` tab. Look for requests that fail (blocked) or suspicious background requests (telemetry) when the service is running.
-- **DNS Logs:** If you run Pi-hole or AdGuard Home, check your query logs when the surveillance software is active.
-- **Wildcards:** Be careful with broad blocking. Blocking `||google.com^` will break the internet. Blocking `||cros-omahaproxy.googleusercontent.com^` is precise.
-
-## 🤝 Code of Conduct
-
-We value accuracy, privacy, and collaboration. Please ensure your interactions—whether in issues, pull requests, or Discord—are respectful and constructive. By participating, you are expected to uphold our **[Code of Conduct](CODE_OF_CONDUCT.md)**.
-
-## 📜 License
-
-By contributing to hapara.fail, you agree that your contributions will be licensed under the same **GNU General Public License v3.0 (GPLv3)** that covers the project. Details can be found at [www.hapara.fail/license](https://www.hapara.fail/license).
+Follow the [Code of Conduct](CODE_OF_CONDUCT.md). By contributing, you agree that your contribution is licensed under the repository's [GPL-3.0-only license](LICENSE).

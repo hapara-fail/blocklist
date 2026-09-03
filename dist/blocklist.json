@@ -1,0 +1,2819 @@
+{
+  "schema_version": "1.0.0",
+  "list_version": "202609032000",
+  "generated_at": "2026-09-03T20:00:00Z",
+  "update_interval_hours": 72,
+  "project": {
+    "name": "hapara.fail Blocklist",
+    "homepage": "https://www.hapara.fail/",
+    "repository": "https://github.com/hapara-fail/blocklist",
+    "license": "GPL-3.0-only",
+    "license_url": "https://github.com/hapara-fail/blocklist/blob/main/LICENSE",
+    "description": "Blocks school-mandated surveillance software, spyware, and other invasive educational technology services."
+  },
+  "entry_count": 280,
+  "block_entry_count": 279,
+  "allow_entry_count": 1,
+  "entries": [
+    {
+      "action": "block",
+      "domain": "300624.com",
+      "unicode_domain": "300624.com",
+      "service": "FamiSafe",
+      "category": "parental-control",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "5rw61tcrl5.execute-api.us-west-2.amazonaws.com",
+      "unicode_domain": "5rw61tcrl5.execute-api.us-west-2.amazonaws.com",
+      "service": "Lightspeed Systems",
+      "category": "filtering",
+      "description": "Known patched/failsafe behavior; see README.",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "a-fallback-lightspeed.ably.io",
+      "unicode_domain": "a-fallback-lightspeed.ably.io",
+      "service": "Lightspeed Systems",
+      "category": "filtering",
+      "description": "Known patched/failsafe behavior; see README.",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "accountable2you-android.firebaseio.com",
+      "unicode_domain": "accountable2you-android.firebaseio.com",
+      "service": "Accountable2You",
+      "category": "parental-control",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "accountable2you.com",
+      "unicode_domain": "accountable2you.com",
+      "service": "Accountable2You",
+      "category": "parental-control",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "amplifiedit.com",
+      "unicode_domain": "amplifiedit.com",
+      "service": "Gopher",
+      "category": "device-management",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "apisanta.com",
+      "unicode_domain": "apisanta.com",
+      "service": "Deledao",
+      "category": "filtering",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "aristotlek12.com",
+      "unicode_domain": "aristotlek12.com",
+      "service": "AristotleK12",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "ativion.com",
+      "unicode_domain": "ativion.com",
+      "service": "Ativion Software",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "ativionnx.com",
+      "unicode_domain": "ativionnx.com",
+      "service": "Ativion Software",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "b-fallback-lightspeed.ably.io",
+      "unicode_domain": "b-fallback-lightspeed.ably.io",
+      "service": "Lightspeed Systems",
+      "category": "filtering",
+      "description": "Known patched/failsafe behavior; see README.",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "b16rt683ll.execute-api.us-west-2.amazonaws.com",
+      "unicode_domain": "b16rt683ll.execute-api.us-west-2.amazonaws.com",
+      "service": "Lightspeed Systems",
+      "category": "filtering",
+      "description": "Known patched/failsafe behavior; see README.",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "bark.app",
+      "unicode_domain": "bark.app",
+      "service": "Bark",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "bark.us",
+      "unicode_domain": "bark.us",
+      "service": "Bark",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "barkforschools.com",
+      "unicode_domain": "barkforschools.com",
+      "service": "Bark",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "beacon-report-uploads-prod.s3.us-west-2.amazonaws.com",
+      "unicode_domain": "beacon-report-uploads-prod.s3.us-west-2.amazonaws.com",
+      "service": "GoGuardian",
+      "category": "monitoring",
+      "description": "Known patched/failsafe behavior; see README.",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "block.si",
+      "unicode_domain": "block.si",
+      "service": "Blocksi",
+      "category": "filtering",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "block.tools",
+      "unicode_domain": "block.tools",
+      "service": "Linewize / Qoria / FamilyZone / Sphirewall",
+      "category": "filtering",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "blocksi-dns.appspot.com",
+      "unicode_domain": "blocksi-dns.appspot.com",
+      "service": "Blocksi",
+      "category": "filtering",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "blocksi.net",
+      "unicode_domain": "blocksi.net",
+      "service": "Blocksi",
+      "category": "filtering",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "blocksicloud.com",
+      "unicode_domain": "blocksicloud.com",
+      "service": "Blocksi",
+      "category": "filtering",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "blocksicloud.net",
+      "unicode_domain": "blocksicloud.net",
+      "service": "Blocksi",
+      "category": "filtering",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "brm-v3.appspot.com",
+      "unicode_domain": "brm-v3.appspot.com",
+      "service": "Blocksi",
+      "category": "filtering",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "c-fallback-lightspeed.ably.io",
+      "unicode_domain": "c-fallback-lightspeed.ably.io",
+      "service": "Lightspeed Systems",
+      "category": "filtering",
+      "description": "Known patched/failsafe behavior; see README.",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "canopy.us",
+      "unicode_domain": "canopy.us",
+      "service": "General Parental Control",
+      "category": "parental-control",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "catchon.com",
+      "unicode_domain": "catchon.com",
+      "service": "Lightspeed Systems",
+      "category": "filtering",
+      "description": "Known patched/failsafe behavior; see README.",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "cipafilter.com",
+      "unicode_domain": "cipafilter.com",
+      "service": "Linewize / Qoria / FamilyZone / Sphirewall",
+      "category": "filtering",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "ck-express.com",
+      "unicode_domain": "ck-express.com",
+      "service": "Ativion Software",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "clevguard.com",
+      "unicode_domain": "clevguard.com",
+      "service": "ClevGuard / KidsGuard",
+      "category": "parental-control",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "clevguard.org",
+      "unicode_domain": "clevguard.org",
+      "service": "ClevGuard / KidsGuard",
+      "category": "parental-control",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "contentkeeper.com",
+      "unicode_domain": "contentkeeper.com",
+      "service": "Ativion Software",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "contentkeeper.io",
+      "unicode_domain": "contentkeeper.io",
+      "service": "Ativion Software",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "contentkeeper.net",
+      "unicode_domain": "contentkeeper.net",
+      "service": "Ativion Software",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "contentwatch.com",
+      "unicode_domain": "contentwatch.com",
+      "service": "General Parental Control",
+      "category": "parental-control",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "custodio.com",
+      "unicode_domain": "custodio.com",
+      "service": "Linewize / Qoria / FamilyZone / Sphirewall",
+      "category": "filtering",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "deepfreeze.com",
+      "unicode_domain": "deepfreeze.com",
+      "service": "Faronics",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "deledao.com",
+      "unicode_domain": "deledao.com",
+      "service": "Deledao",
+      "category": "filtering",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "deledao.net",
+      "unicode_domain": "deledao.net",
+      "service": "Deledao",
+      "category": "filtering",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "discovenger.com",
+      "unicode_domain": "discovenger.com",
+      "service": "General Parental Control",
+      "category": "parental-control",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "dldschool.org",
+      "unicode_domain": "dldschool.org",
+      "service": "Deledao",
+      "category": "filtering",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "dyknow-data-prd.s3.amazonaws.com",
+      "unicode_domain": "dyknow-data-prd.s3.amazonaws.com",
+      "service": "DyKnow",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "dyknow.com",
+      "unicode_domain": "dyknow.com",
+      "service": "DyKnow",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "educatorimpact.com",
+      "unicode_domain": "educatorimpact.com",
+      "service": "Pulse (and related services: EducatorImpact)",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "eipulse.zendesk.com",
+      "unicode_domain": "eipulse.zendesk.com",
+      "service": "Pulse (and related services: EducatorImpact)",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "eyezy.com",
+      "unicode_domain": "eyezy.com",
+      "service": "Eyezy",
+      "category": "parental-control",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "family.microsoft.com",
+      "unicode_domain": "family.microsoft.com",
+      "service": "Microsoft Family Safety",
+      "category": "parental-control",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "familyorbit.com",
+      "unicode_domain": "familyorbit.com",
+      "service": "FamilyOrbit",
+      "category": "parental-control",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "familyorbit.net",
+      "unicode_domain": "familyorbit.net",
+      "service": "FamilyOrbit",
+      "category": "parental-control",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "familysafetyproduction.com",
+      "unicode_domain": "familysafetyproduction.com",
+      "service": "Life360",
+      "category": "parental-control",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "familyzone.com",
+      "unicode_domain": "familyzone.com",
+      "service": "Linewize / Qoria / FamilyZone / Sphirewall",
+      "category": "filtering",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "familyzone.com.au",
+      "unicode_domain": "familyzone.com.au",
+      "service": "Linewize / Qoria / FamilyZone / Sphirewall",
+      "category": "filtering",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "familyzone.io",
+      "unicode_domain": "familyzone.io",
+      "service": "Linewize / Qoria / FamilyZone / Sphirewall",
+      "category": "filtering",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "familyzone.tools",
+      "unicode_domain": "familyzone.tools",
+      "service": "Linewize / Qoria / FamilyZone / Sphirewall",
+      "category": "filtering",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "famisafe-b6807.firebaseio.com",
+      "unicode_domain": "famisafe-b6807.firebaseio.com",
+      "service": "FamiSafe",
+      "category": "parental-control",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "famisafe.com",
+      "unicode_domain": "famisafe.com",
+      "service": "FamiSafe",
+      "category": "parental-control",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "famisafe.wondershare.com",
+      "unicode_domain": "famisafe.wondershare.com",
+      "service": "FamiSafe",
+      "category": "parental-control",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "famisafeapp.wondershare.com",
+      "unicode_domain": "famisafeapp.wondershare.com",
+      "service": "FamiSafe",
+      "category": "parental-control",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "faronics.com",
+      "unicode_domain": "faronics.com",
+      "service": "Faronics",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "faronicsdeploy.com",
+      "unicode_domain": "faronicsdeploy.com",
+      "service": "Faronics",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "fastvue.co",
+      "unicode_domain": "fastvue.co",
+      "service": "Ativion Software",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "findmychilds.org",
+      "unicode_domain": "findmychilds.org",
+      "service": "Findmykids",
+      "category": "parental-control",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "findmykids.org",
+      "unicode_domain": "findmykids.org",
+      "service": "Findmykids",
+      "category": "parental-control",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "flexispy.com",
+      "unicode_domain": "flexispy.com",
+      "service": "General Parental Control",
+      "category": "parental-control",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "forticlient.com",
+      "unicode_domain": "forticlient.com",
+      "service": "Fortinet / FortiGuard",
+      "category": "filtering",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "forticloud.com",
+      "unicode_domain": "forticloud.com",
+      "service": "Fortinet / FortiGuard",
+      "category": "filtering",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "fortiguard.com",
+      "unicode_domain": "fortiguard.com",
+      "service": "Fortinet / FortiGuard",
+      "category": "filtering",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "fortinet.com",
+      "unicode_domain": "fortinet.com",
+      "service": "Fortinet / FortiGuard",
+      "category": "filtering",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "fzbox.tools",
+      "unicode_domain": "fzbox.tools",
+      "service": "Linewize / Qoria / FamilyZone / Sphirewall",
+      "category": "filtering",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "gaggle.net",
+      "unicode_domain": "gaggle.net",
+      "service": "Gaggle",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "gaggle.services",
+      "unicode_domain": "gaggle.services",
+      "service": "Gaggle",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "geozilla.autosmartins.com",
+      "unicode_domain": "geozilla.autosmartins.com",
+      "service": "Geozilla",
+      "category": "parental-control",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "geozilla.com",
+      "unicode_domain": "geozilla.com",
+      "service": "Geozilla",
+      "category": "parental-control",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "geozillafamily-c92d0.firebaseio.com",
+      "unicode_domain": "geozillafamily-c92d0.firebaseio.com",
+      "service": "Geozilla",
+      "category": "parental-control",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "geozillafamily.firebaseio.com",
+      "unicode_domain": "geozillafamily.firebaseio.com",
+      "service": "Geozilla",
+      "category": "parental-control",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "goguardian.com",
+      "unicode_domain": "goguardian.com",
+      "service": "GoGuardian",
+      "category": "monitoring",
+      "description": "Known patched/failsafe behavior; see README.",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "gopher-buddy-prod.appspot.com",
+      "unicode_domain": "gopher-buddy-prod.appspot.com",
+      "service": "Gopher",
+      "category": "device-management",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "gopherforchrome.app",
+      "unicode_domain": "gopherforchrome.app",
+      "service": "Gopher",
+      "category": "device-management",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "hapara.com",
+      "unicode_domain": "hapara.com",
+      "service": "Hapara",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "haparaview.appspot.com",
+      "unicode_domain": "haparaview.appspot.com",
+      "service": "Hapara",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "hitmanpro.com",
+      "unicode_domain": "hitmanpro.com",
+      "service": "Sophos",
+      "category": "filtering",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "home.tools",
+      "unicode_domain": "home.tools",
+      "service": "Linewize / Qoria / FamilyZone / Sphirewall",
+      "category": "filtering",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "hosted-extensions.s3.us-west-2.amazonaws.com",
+      "unicode_domain": "hosted-extensions.s3.us-west-2.amazonaws.com",
+      "service": "GoGuardian",
+      "category": "monitoring",
+      "description": "Known patched/failsafe behavior; see README.",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "hoverwatch.com",
+      "unicode_domain": "hoverwatch.com",
+      "service": "General Parental Control",
+      "category": "parental-control",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "iboss.com",
+      "unicode_domain": "iboss.com",
+      "service": "iboss",
+      "category": "filtering",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "iboss.si",
+      "unicode_domain": "iboss.si",
+      "service": "iboss",
+      "category": "filtering",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "ibosscloud.com",
+      "unicode_domain": "ibosscloud.com",
+      "service": "iboss",
+      "category": "filtering",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "impero.com",
+      "unicode_domain": "impero.com",
+      "service": "Ativion Software",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "imperosoftware.co.uk",
+      "unicode_domain": "imperosoftware.co.uk",
+      "service": "Ativion Software",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "imperosoftware.com",
+      "unicode_domain": "imperosoftware.com",
+      "service": "Ativion Software",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "jamf.com",
+      "unicode_domain": "jamf.com",
+      "service": "MDM Infrastructure (Jamf / Mosyle)",
+      "category": "device-management",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "jamfcloud.com",
+      "unicode_domain": "jamfcloud.com",
+      "service": "MDM Infrastructure (Jamf / Mosyle)",
+      "category": "device-management",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "jamfschool.com",
+      "unicode_domain": "jamfschool.com",
+      "service": "MDM Infrastructure (Jamf / Mosyle)",
+      "category": "device-management",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "jiobit.com",
+      "unicode_domain": "jiobit.com",
+      "service": "Life360",
+      "category": "parental-control",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "kdlparentalcontrol.com",
+      "unicode_domain": "kdlparentalcontrol.com",
+      "service": "Kidslox",
+      "category": "parental-control",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "kiddoware.com",
+      "unicode_domain": "kiddoware.com",
+      "service": "General Parental Control",
+      "category": "parental-control",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "kidgy.com",
+      "unicode_domain": "kidgy.com",
+      "service": "General Parental Control",
+      "category": "parental-control",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "kidlogger.net",
+      "unicode_domain": "kidlogger.net",
+      "service": "General Parental Control",
+      "category": "parental-control",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "kidslox.com",
+      "unicode_domain": "kidslox.com",
+      "service": "Kidslox",
+      "category": "parental-control",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "kidslox.firebaseio.com",
+      "unicode_domain": "kidslox.firebaseio.com",
+      "service": "Kidslox",
+      "category": "parental-control",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "kidslox.page.link",
+      "unicode_domain": "kidslox.page.link",
+      "service": "Kidslox",
+      "category": "parental-control",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "kidsmanagement-pa.clients6.google.com",
+      "unicode_domain": "kidsmanagement-pa.clients6.google.com",
+      "service": "Google Family Link",
+      "category": "parental-control",
+      "description": "Conservative partial coverage to reduce overlap risk",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "kidsmanagement-pa.googleapis.com",
+      "unicode_domain": "kidsmanagement-pa.googleapis.com",
+      "service": "Google Family Link",
+      "category": "parental-control",
+      "description": "Conservative partial coverage to reduce overlap risk",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "l5c.io",
+      "unicode_domain": "l5c.io",
+      "service": "Lightspeed Systems",
+      "category": "filtering",
+      "description": "Known patched/failsafe behavior; see README.",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "lanschool.com",
+      "unicode_domain": "lanschool.com",
+      "service": "LanSchool (All Regions)",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "lanschoolair.com",
+      "unicode_domain": "lanschoolair.com",
+      "service": "LanSchool (All Regions)",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "laptoplookout.com",
+      "unicode_domain": "laptoplookout.com",
+      "service": "GoGuardian",
+      "category": "monitoring",
+      "description": "Known patched/failsafe behavior; see README.",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "launchdarkly.com",
+      "unicode_domain": "launchdarkly.com",
+      "service": "MDM Infrastructure (Jamf / Mosyle)",
+      "category": "device-management",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "learnsafe.com",
+      "unicode_domain": "learnsafe.com",
+      "service": "LearnSafe",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "lenovosoftware.com",
+      "unicode_domain": "lenovosoftware.com",
+      "service": "LanSchool (All Regions)",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "lf360.co",
+      "unicode_domain": "lf360.co",
+      "service": "Life360",
+      "category": "parental-control",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "lgfl.net",
+      "unicode_domain": "lgfl.net",
+      "service": "LGFL / Senso",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "lgfl.org.uk",
+      "unicode_domain": "lgfl.org.uk",
+      "service": "LGFL / Senso",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "life360-com-l360safetycenter.firebaseio.com",
+      "unicode_domain": "life360-com-l360safetycenter.firebaseio.com",
+      "service": "Life360",
+      "category": "parental-control",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "life360-dev.tile-api.com",
+      "unicode_domain": "life360-dev.tile-api.com",
+      "service": "Life360",
+      "category": "parental-control",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "life360-img.s3.amazonaws.com",
+      "unicode_domain": "life360-img.s3.amazonaws.com",
+      "service": "Life360",
+      "category": "parental-control",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "life360-location-dev.tile-api.com",
+      "unicode_domain": "life360-location-dev.tile-api.com",
+      "service": "Life360",
+      "category": "parental-control",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "life360-wordpress.s3.amazonaws.com",
+      "unicode_domain": "life360-wordpress.s3.amazonaws.com",
+      "service": "Life360",
+      "category": "parental-control",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "life360.atlassian.net",
+      "unicode_domain": "life360.atlassian.net",
+      "service": "Life360",
+      "category": "parental-control",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "life360.com",
+      "unicode_domain": "life360.com",
+      "service": "Life360",
+      "category": "parental-control",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "life360.pubnub.com",
+      "unicode_domain": "life360.pubnub.com",
+      "service": "Life360",
+      "category": "parental-control",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "life360feedback.typeform.com",
+      "unicode_domain": "life360feedback.typeform.com",
+      "service": "Life360",
+      "category": "parental-control",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "lightspeed-a-fallback.ably-realtime.com",
+      "unicode_domain": "lightspeed-a-fallback.ably-realtime.com",
+      "service": "Lightspeed Systems",
+      "category": "filtering",
+      "description": "Known patched/failsafe behavior; see README.",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "lightspeed-apps.s3.amazonaws.com",
+      "unicode_domain": "lightspeed-apps.s3.amazonaws.com",
+      "service": "Lightspeed Systems",
+      "category": "filtering",
+      "description": "Known patched/failsafe behavior; see README.",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "lightspeed-b-fallback.ably-realtime.com",
+      "unicode_domain": "lightspeed-b-fallback.ably-realtime.com",
+      "service": "Lightspeed Systems",
+      "category": "filtering",
+      "description": "Known patched/failsafe behavior; see README.",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "lightspeed-c-fallback.ably-realtime.com",
+      "unicode_domain": "lightspeed-c-fallback.ably-realtime.com",
+      "service": "Lightspeed Systems",
+      "category": "filtering",
+      "description": "Known patched/failsafe behavior; see README.",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "lightspeed-d-fallback.ably-realtime.com",
+      "unicode_domain": "lightspeed-d-fallback.ably-realtime.com",
+      "service": "Lightspeed Systems",
+      "category": "filtering",
+      "description": "Known patched/failsafe behavior; see README.",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "lightspeed-e-fallback.ably-realtime.com",
+      "unicode_domain": "lightspeed-e-fallback.ably-realtime.com",
+      "service": "Lightspeed Systems",
+      "category": "filtering",
+      "description": "Known patched/failsafe behavior; see README.",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "lightspeed-realtime.ably.io",
+      "unicode_domain": "lightspeed-realtime.ably.io",
+      "service": "Lightspeed Systems",
+      "category": "filtering",
+      "description": "Known patched/failsafe behavior; see README.",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "lightspeed-rest.ably.io",
+      "unicode_domain": "lightspeed-rest.ably.io",
+      "service": "Lightspeed Systems",
+      "category": "filtering",
+      "description": "Known patched/failsafe behavior; see README.",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "lightspeedsystems.app",
+      "unicode_domain": "lightspeedsystems.app",
+      "service": "Lightspeed Systems",
+      "category": "filtering",
+      "description": "Known patched/failsafe behavior; see README.",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "lightspeedsystems.com",
+      "unicode_domain": "lightspeedsystems.com",
+      "service": "Lightspeed Systems",
+      "category": "filtering",
+      "description": "Known patched/failsafe behavior; see README.",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "linewize.com",
+      "unicode_domain": "linewize.com",
+      "service": "Linewize / Qoria / FamilyZone / Sphirewall",
+      "category": "filtering",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "linewize.io",
+      "unicode_domain": "linewize.io",
+      "service": "Linewize / Qoria / FamilyZone / Sphirewall",
+      "category": "filtering",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "linewize.net",
+      "unicode_domain": "linewize.net",
+      "service": "Linewize / Qoria / FamilyZone / Sphirewall",
+      "category": "filtering",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "linewizereseller.net",
+      "unicode_domain": "linewizereseller.net",
+      "service": "Linewize / Qoria / FamilyZone / Sphirewall",
+      "category": "filtering",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "lockittight.com",
+      "unicode_domain": "lockittight.com",
+      "service": "General Parental Control",
+      "category": "parental-control",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "ls-papi.com",
+      "unicode_domain": "ls-papi.com",
+      "service": "Lightspeed Systems",
+      "category": "filtering",
+      "description": "Known patched/failsafe behavior; see README.",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "ls-pki.css-security.com",
+      "unicode_domain": "ls-pki.css-security.com",
+      "service": "Lightspeed Systems",
+      "category": "filtering",
+      "description": "Known patched/failsafe behavior; see README.",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "ls101cms.csspki.com",
+      "unicode_domain": "ls101cms.csspki.com",
+      "service": "Lightspeed Systems",
+      "category": "filtering",
+      "description": "Known patched/failsafe behavior; see README.",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "lsaccess.com",
+      "unicode_domain": "lsaccess.com",
+      "service": "Lightspeed Systems",
+      "category": "filtering",
+      "description": "Known patched/failsafe behavior; see README.",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "lsaccess.me",
+      "unicode_domain": "lsaccess.me",
+      "service": "Lightspeed Systems",
+      "category": "filtering",
+      "description": "Known patched/failsafe behavior; see README.",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "lsagent.fcps.org",
+      "unicode_domain": "lsagent.fcps.org",
+      "service": "Lightspeed Systems",
+      "category": "filtering",
+      "description": "Known patched/failsafe behavior; see README.",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "lsair.app",
+      "unicode_domain": "lsair.app",
+      "service": "LanSchool (All Regions)",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "lsclassroom.com",
+      "unicode_domain": "lsclassroom.com",
+      "service": "Lightspeed Systems",
+      "category": "filtering",
+      "description": "Known patched/failsafe behavior; see README.",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "lsfilter.com",
+      "unicode_domain": "lsfilter.com",
+      "service": "Lightspeed Systems",
+      "category": "filtering",
+      "description": "Known patched/failsafe behavior; see README.",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "lsmdm-production.s3.amazonaws.com",
+      "unicode_domain": "lsmdm-production.s3.amazonaws.com",
+      "service": "Lightspeed Systems",
+      "category": "filtering",
+      "description": "Known patched/failsafe behavior; see README.",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "lsmdm.com",
+      "unicode_domain": "lsmdm.com",
+      "service": "Lightspeed Systems",
+      "category": "filtering",
+      "description": "Known patched/failsafe behavior; see README.",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "lsrelay-config-production.s3.amazonaws.com",
+      "unicode_domain": "lsrelay-config-production.s3.amazonaws.com",
+      "service": "Lightspeed Systems",
+      "category": "filtering",
+      "description": "Known patched/failsafe behavior; see README.",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "lsrelay-extensions-production.s3.amazonaws.com",
+      "unicode_domain": "lsrelay-extensions-production.s3.amazonaws.com",
+      "service": "Lightspeed Systems",
+      "category": "filtering",
+      "description": "Known patched/failsafe behavior; see README.",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "lsrelayaccess.com",
+      "unicode_domain": "lsrelayaccess.com",
+      "service": "Lightspeed Systems",
+      "category": "filtering",
+      "description": "Known patched/failsafe behavior; see README.",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "lsurl.me",
+      "unicode_domain": "lsurl.me",
+      "service": "Lightspeed Systems",
+      "category": "filtering",
+      "description": "Known patched/failsafe behavior; see README.",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "managedmethods.com",
+      "unicode_domain": "managedmethods.com",
+      "service": "ManagedMethods",
+      "category": "filtering",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "meetcircle-blue.com",
+      "unicode_domain": "meetcircle-blue.com",
+      "service": "Circle",
+      "category": "parental-control",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "meetcircle-netgear.co",
+      "unicode_domain": "meetcircle-netgear.co",
+      "service": "Circle",
+      "category": "parental-control",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "meetcircle-sky.co",
+      "unicode_domain": "meetcircle-sky.co",
+      "service": "Circle",
+      "category": "parental-control",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "meetcircle.com",
+      "unicode_domain": "meetcircle.com",
+      "service": "Circle",
+      "category": "parental-control",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "mmguardian.com",
+      "unicode_domain": "mmguardian.com",
+      "service": "General Parental Control",
+      "category": "parental-control",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "mobicip.com",
+      "unicode_domain": "mobicip.com",
+      "service": "General Parental Control",
+      "category": "parental-control",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "mobileguardian.com",
+      "unicode_domain": "mobileguardian.com",
+      "service": "General Parental Control",
+      "category": "parental-control",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "mosyle.com",
+      "unicode_domain": "mosyle.com",
+      "service": "MDM Infrastructure (Jamf / Mosyle)",
+      "category": "device-management",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "mosyle.net",
+      "unicode_domain": "mosyle.net",
+      "service": "MDM Infrastructure (Jamf / Mosyle)",
+      "category": "device-management",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "mspy-app.co",
+      "unicode_domain": "mspy-app.co",
+      "service": "mSpy",
+      "category": "parental-control",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "mspy.com",
+      "unicode_domain": "mspy.com",
+      "service": "mSpy",
+      "category": "parental-control",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "mspyonline.com",
+      "unicode_domain": "mspyonline.com",
+      "service": "mSpy",
+      "category": "parental-control",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "myiboss.net",
+      "unicode_domain": "myiboss.net",
+      "service": "iboss",
+      "category": "filtering",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "net-ref.com",
+      "unicode_domain": "net-ref.com",
+      "service": "Linewize / Qoria / FamilyZone / Sphirewall",
+      "category": "filtering",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "netnanny.com",
+      "unicode_domain": "netnanny.com",
+      "service": "General Parental Control",
+      "category": "parental-control",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "netop.cn",
+      "unicode_domain": "netop.cn",
+      "service": "Ativion Software",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "netop.com",
+      "unicode_domain": "netop.com",
+      "service": "Ativion Software",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "netsupportdna.com",
+      "unicode_domain": "netsupportdna.com",
+      "service": "NetSupport",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "netsupportschool.com",
+      "unicode_domain": "netsupportschool.com",
+      "service": "NetSupport",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "netsupportsoftware.com",
+      "unicode_domain": "netsupportsoftware.com",
+      "service": "NetSupport",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "netsweeper.com",
+      "unicode_domain": "netsweeper.com",
+      "service": "LGFL / Senso",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "ourpact.com",
+      "unicode_domain": "ourpact.com",
+      "service": "General Parental Control",
+      "category": "parental-control",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "p7nvu5it0k.execute-api.us-west-2.amazonaws.com",
+      "unicode_domain": "p7nvu5it0k.execute-api.us-west-2.amazonaws.com",
+      "service": "Lightspeed Systems",
+      "category": "filtering",
+      "description": "Known patched/failsafe behavior; see README.",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "allow",
+      "domain": "pass.securly.com",
+      "unicode_domain": "pass.securly.com",
+      "service": "Securly",
+      "category": "filtering",
+      "description": "Known patched/failsafe behavior; see README.",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "q12z.net",
+      "unicode_domain": "q12z.net",
+      "service": "Eyezy",
+      "category": "parental-control",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "qoria-api.cloud",
+      "unicode_domain": "qoria-api.cloud",
+      "service": "Linewize / Qoria / FamilyZone / Sphirewall",
+      "category": "filtering",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "qoria.cloud",
+      "unicode_domain": "qoria.cloud",
+      "service": "Linewize / Qoria / FamilyZone / Sphirewall",
+      "category": "filtering",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "qoria.com",
+      "unicode_domain": "qoria.com",
+      "service": "Linewize / Qoria / FamilyZone / Sphirewall",
+      "category": "filtering",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "qoriaapis.cloud",
+      "unicode_domain": "qoriaapis.cloud",
+      "service": "Linewize / Qoria / FamilyZone / Sphirewall",
+      "category": "filtering",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "qustodio.app",
+      "unicode_domain": "qustodio.app",
+      "service": "Linewize / Qoria / FamilyZone / Sphirewall",
+      "category": "filtering",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "qustodio.com",
+      "unicode_domain": "qustodio.com",
+      "service": "Linewize / Qoria / FamilyZone / Sphirewall",
+      "category": "filtering",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "qustodio.es",
+      "unicode_domain": "qustodio.es",
+      "service": "Linewize / Qoria / FamilyZone / Sphirewall",
+      "category": "filtering",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "qustodio.net",
+      "unicode_domain": "qustodio.net",
+      "service": "Linewize / Qoria / FamilyZone / Sphirewall",
+      "category": "filtering",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "qustodio.org",
+      "unicode_domain": "qustodio.org",
+      "service": "Linewize / Qoria / FamilyZone / Sphirewall",
+      "category": "filtering",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "radix-int.com",
+      "unicode_domain": "radix-int.com",
+      "service": "Radix VISO",
+      "category": "device-management",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "relay.school",
+      "unicode_domain": "relay.school",
+      "service": "Lightspeed Systems",
+      "category": "filtering",
+      "description": "Known patched/failsafe behavior; see README.",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "safehomeschool.net",
+      "unicode_domain": "safehomeschool.net",
+      "service": "LGFL / Senso",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "safenet.family",
+      "unicode_domain": "safenet.family",
+      "service": "General Parental Control",
+      "category": "parental-control",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "screentimelabs.com",
+      "unicode_domain": "screentimelabs.com",
+      "service": "General Parental Control",
+      "category": "parental-control",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "securly.com",
+      "unicode_domain": "securly.com",
+      "service": "Securly",
+      "category": "filtering",
+      "description": "Known patched/failsafe behavior; see README.",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "seekdroid.com",
+      "unicode_domain": "seekdroid.com",
+      "service": "General Parental Control",
+      "category": "parental-control",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "senso.cloud",
+      "unicode_domain": "senso.cloud",
+      "service": "LGFL / Senso",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "sensoeugeneral.blob.core.windows.net",
+      "unicode_domain": "sensoeugeneral.blob.core.windows.net",
+      "service": "LGFL / Senso",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "sensoeustorage.blob.core.windows.net",
+      "unicode_domain": "sensoeustorage.blob.core.windows.net",
+      "service": "LGFL / Senso",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "sensologarchivestorage.blob.core.windows.net",
+      "unicode_domain": "sensologarchivestorage.blob.core.windows.net",
+      "service": "LGFL / Senso",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "sensologcapturesprodau01.blob.core.windows.net",
+      "unicode_domain": "sensologcapturesprodau01.blob.core.windows.net",
+      "service": "LGFL / Senso",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "sensologcapturesprodeu01.blob.core.windows.net",
+      "unicode_domain": "sensologcapturesprodeu01.blob.core.windows.net",
+      "service": "LGFL / Senso",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "sensologcapturesprodeu02.blob.core.windows.net",
+      "unicode_domain": "sensologcapturesprodeu02.blob.core.windows.net",
+      "service": "LGFL / Senso",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "sensologcapturesprodeu03.blob.core.windows.net",
+      "unicode_domain": "sensologcapturesprodeu03.blob.core.windows.net",
+      "service": "LGFL / Senso",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "sensologcapturesprodeu04.blob.core.windows.net",
+      "unicode_domain": "sensologcapturesprodeu04.blob.core.windows.net",
+      "service": "LGFL / Senso",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "sensologcapturesprodeu05.blob.core.windows.net",
+      "unicode_domain": "sensologcapturesprodeu05.blob.core.windows.net",
+      "service": "LGFL / Senso",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "sensologcapturesprodna01.blob.core.windows.net",
+      "unicode_domain": "sensologcapturesprodna01.blob.core.windows.net",
+      "service": "LGFL / Senso",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "sensologcapturesprodna02.blob.core.windows.net",
+      "unicode_domain": "sensologcapturesprodna02.blob.core.windows.net",
+      "service": "LGFL / Senso",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "sensologcapturesprodna03.blob.core.windows.net",
+      "unicode_domain": "sensologcapturesprodna03.blob.core.windows.net",
+      "service": "LGFL / Senso",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "sensologcapturesprodna04.blob.core.windows.net",
+      "unicode_domain": "sensologcapturesprodna04.blob.core.windows.net",
+      "service": "LGFL / Senso",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "sensologrulesetsprodau01.blob.core.windows.net",
+      "unicode_domain": "sensologrulesetsprodau01.blob.core.windows.net",
+      "service": "LGFL / Senso",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "sensologrulesetsprodeu01.blob.core.windows.net",
+      "unicode_domain": "sensologrulesetsprodeu01.blob.core.windows.net",
+      "service": "LGFL / Senso",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "sensologrulesetsprodeu02.blob.core.windows.net",
+      "unicode_domain": "sensologrulesetsprodeu02.blob.core.windows.net",
+      "service": "LGFL / Senso",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "sensologrulesetsprodeu03.blob.core.windows.net",
+      "unicode_domain": "sensologrulesetsprodeu03.blob.core.windows.net",
+      "service": "LGFL / Senso",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "sensologrulesetsprodeu04.blob.core.windows.net",
+      "unicode_domain": "sensologrulesetsprodeu04.blob.core.windows.net",
+      "service": "LGFL / Senso",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "sensologrulesetsprodeu05.blob.core.windows.net",
+      "unicode_domain": "sensologrulesetsprodeu05.blob.core.windows.net",
+      "service": "LGFL / Senso",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "sensologrulesetsprodna01.blob.core.windows.net",
+      "unicode_domain": "sensologrulesetsprodna01.blob.core.windows.net",
+      "service": "LGFL / Senso",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "sensologrulesetsprodna02.blob.core.windows.net",
+      "unicode_domain": "sensologrulesetsprodna02.blob.core.windows.net",
+      "service": "LGFL / Senso",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "sensologrulesetsprodna03.blob.core.windows.net",
+      "unicode_domain": "sensologrulesetsprodna03.blob.core.windows.net",
+      "service": "LGFL / Senso",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "sensologrulesetsprodna04.blob.core.windows.net",
+      "unicode_domain": "sensologrulesetsprodna04.blob.core.windows.net",
+      "service": "LGFL / Senso",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "sensomoduleprodeu.blob.core.windows.net",
+      "unicode_domain": "sensomoduleprodeu.blob.core.windows.net",
+      "service": "LGFL / Senso",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "sensomoduleprodna.blob.core.windows.net",
+      "unicode_domain": "sensomoduleprodna.blob.core.windows.net",
+      "service": "LGFL / Senso",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "sensonotificprodau01.blob.core.windows.net",
+      "unicode_domain": "sensonotificprodau01.blob.core.windows.net",
+      "service": "LGFL / Senso",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "sensonotificprodeu01.blob.core.windows.net",
+      "unicode_domain": "sensonotificprodeu01.blob.core.windows.net",
+      "service": "LGFL / Senso",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "sensonotificprodeu02.blob.core.windows.net",
+      "unicode_domain": "sensonotificprodeu02.blob.core.windows.net",
+      "service": "LGFL / Senso",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "sensonotificprodeu03.blob.core.windows.net",
+      "unicode_domain": "sensonotificprodeu03.blob.core.windows.net",
+      "service": "LGFL / Senso",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "sensonotificprodeu04.blob.core.windows.net",
+      "unicode_domain": "sensonotificprodeu04.blob.core.windows.net",
+      "service": "LGFL / Senso",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "sensonotificprodeu05.blob.core.windows.net",
+      "unicode_domain": "sensonotificprodeu05.blob.core.windows.net",
+      "service": "LGFL / Senso",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "sensonotificprodna01.blob.core.windows.net",
+      "unicode_domain": "sensonotificprodna01.blob.core.windows.net",
+      "service": "LGFL / Senso",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "sensonotificprodna02.blob.core.windows.net",
+      "unicode_domain": "sensonotificprodna02.blob.core.windows.net",
+      "service": "LGFL / Senso",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "sensonotificprodna03.blob.core.windows.net",
+      "unicode_domain": "sensonotificprodna03.blob.core.windows.net",
+      "service": "LGFL / Senso",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "sensonotificprodna04.blob.core.windows.net",
+      "unicode_domain": "sensonotificprodna04.blob.core.windows.net",
+      "service": "LGFL / Senso",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "sensoportmodstorprodeu02.blob.core.windows.net",
+      "unicode_domain": "sensoportmodstorprodeu02.blob.core.windows.net",
+      "service": "LGFL / Senso",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "sensoportmodstorprodeu03.blob.core.windows.net",
+      "unicode_domain": "sensoportmodstorprodeu03.blob.core.windows.net",
+      "service": "LGFL / Senso",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "sensoportmodstorprodeu04.blob.core.windows.net",
+      "unicode_domain": "sensoportmodstorprodeu04.blob.core.windows.net",
+      "service": "LGFL / Senso",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "sensoportmodstorprodeu05.blob.core.windows.net",
+      "unicode_domain": "sensoportmodstorprodeu05.blob.core.windows.net",
+      "service": "LGFL / Senso",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "sensoportmodulestoreau01.blob.core.windows.net",
+      "unicode_domain": "sensoportmodulestoreau01.blob.core.windows.net",
+      "service": "LGFL / Senso",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "sensoportmodulestoreeu01.blob.core.windows.net",
+      "unicode_domain": "sensoportmodulestoreeu01.blob.core.windows.net",
+      "service": "LGFL / Senso",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "sensoportmodulestorena01.blob.core.windows.net",
+      "unicode_domain": "sensoportmodulestorena01.blob.core.windows.net",
+      "service": "LGFL / Senso",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "sensoportmodulestorena02.blob.core.windows.net",
+      "unicode_domain": "sensoportmodulestorena02.blob.core.windows.net",
+      "service": "LGFL / Senso",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "sensoportmodulestorena03.blob.core.windows.net",
+      "unicode_domain": "sensoportmodulestorena03.blob.core.windows.net",
+      "service": "LGFL / Senso",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "sensoportmodulestorena04.blob.core.windows.net",
+      "unicode_domain": "sensoportmodulestorena04.blob.core.windows.net",
+      "service": "LGFL / Senso",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "sensoservicedeskprodau01.blob.core.windows.net",
+      "unicode_domain": "sensoservicedeskprodau01.blob.core.windows.net",
+      "service": "LGFL / Senso",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "sensoservicedeskprodeu01.blob.core.windows.net",
+      "unicode_domain": "sensoservicedeskprodeu01.blob.core.windows.net",
+      "service": "LGFL / Senso",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "sensoservicedeskprodeu02.blob.core.windows.net",
+      "unicode_domain": "sensoservicedeskprodeu02.blob.core.windows.net",
+      "service": "LGFL / Senso",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "sensoservicedeskprodeu03.blob.core.windows.net",
+      "unicode_domain": "sensoservicedeskprodeu03.blob.core.windows.net",
+      "service": "LGFL / Senso",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "sensoservicedeskprodeu04.blob.core.windows.net",
+      "unicode_domain": "sensoservicedeskprodeu04.blob.core.windows.net",
+      "service": "LGFL / Senso",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "sensoservicedeskprodeu05.blob.core.windows.net",
+      "unicode_domain": "sensoservicedeskprodeu05.blob.core.windows.net",
+      "service": "LGFL / Senso",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "sensoservicedeskprodna01.blob.core.windows.net",
+      "unicode_domain": "sensoservicedeskprodna01.blob.core.windows.net",
+      "service": "LGFL / Senso",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "sensoservicedeskprodna02.blob.core.windows.net",
+      "unicode_domain": "sensoservicedeskprodna02.blob.core.windows.net",
+      "service": "LGFL / Senso",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "sensoservicedeskprodna03.blob.core.windows.net",
+      "unicode_domain": "sensoservicedeskprodna03.blob.core.windows.net",
+      "service": "LGFL / Senso",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "sensoservicedeskprodna04.blob.core.windows.net",
+      "unicode_domain": "sensoservicedeskprodna04.blob.core.windows.net",
+      "service": "LGFL / Senso",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "sentry.pub.jamf.build",
+      "unicode_domain": "sentry.pub.jamf.build",
+      "service": "MDM Infrastructure (Jamf / Mosyle)",
+      "category": "device-management",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "sgtlabs.com",
+      "unicode_domain": "sgtlabs.com",
+      "service": "AristotleK12",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "smoothwall.cachefly.net",
+      "unicode_domain": "smoothwall.cachefly.net",
+      "service": "Smoothwall",
+      "category": "filtering",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "smoothwall.cloud",
+      "unicode_domain": "smoothwall.cloud",
+      "service": "Smoothwall",
+      "category": "filtering",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "smoothwall.com",
+      "unicode_domain": "smoothwall.com",
+      "service": "Smoothwall",
+      "category": "filtering",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "sophos.com",
+      "unicode_domain": "sophos.com",
+      "service": "Sophos",
+      "category": "filtering",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "sophosupd.com",
+      "unicode_domain": "sophosupd.com",
+      "service": "Sophos",
+      "category": "filtering",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "sophosupd.net",
+      "unicode_domain": "sophosupd.net",
+      "service": "Sophos",
+      "category": "filtering",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "sophosxl.com",
+      "unicode_domain": "sophosxl.com",
+      "service": "Sophos",
+      "category": "filtering",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "sophosxl.net",
+      "unicode_domain": "sophosxl.net",
+      "service": "Sophos",
+      "category": "filtering",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "sphirewall.net",
+      "unicode_domain": "sphirewall.net",
+      "service": "Linewize / Qoria / FamilyZone / Sphirewall",
+      "category": "filtering",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "spyhuman.com",
+      "unicode_domain": "spyhuman.com",
+      "service": "General Parental Control",
+      "category": "parental-control",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "spyrix.com",
+      "unicode_domain": "spyrix.com",
+      "service": "Spyrix",
+      "category": "parental-control",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "spyrix.net",
+      "unicode_domain": "spyrix.net",
+      "service": "Spyrix",
+      "category": "parental-control",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "spyrix.pro",
+      "unicode_domain": "spyrix.pro",
+      "service": "Spyrix",
+      "category": "parental-control",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "tabpilot.com",
+      "unicode_domain": "tabpilot.com",
+      "service": "Securly",
+      "category": "filtering",
+      "description": "Known patched/failsafe behavior; see README.",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "td-admin.appspot.com",
+      "unicode_domain": "td-admin.appspot.com",
+      "service": "Hapara",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "td-setup.appspot.com",
+      "unicode_domain": "td-setup.appspot.com",
+      "service": "Hapara",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "teacherdashboard.com",
+      "unicode_domain": "teacherdashboard.com",
+      "service": "Hapara",
+      "category": "monitoring",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "troomi.com",
+      "unicode_domain": "troomi.com",
+      "service": "General Parental Control",
+      "category": "parental-control",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "truple.io",
+      "unicode_domain": "truple.io",
+      "service": "General Parental Control",
+      "category": "parental-control",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "umobix.com",
+      "unicode_domain": "umobix.com",
+      "service": "General Parental Control",
+      "category": "parental-control",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "useboomerang.com",
+      "unicode_domain": "useboomerang.com",
+      "service": "General Parental Control",
+      "category": "parental-control",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "visomdm.com",
+      "unicode_domain": "visomdm.com",
+      "service": "Radix VISO",
+      "category": "device-management",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "webwatcher.com",
+      "unicode_domain": "webwatcher.com",
+      "service": "General Parental Control",
+      "category": "parental-control",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "where-is-my-children.firebaseio.com",
+      "unicode_domain": "where-is-my-children.firebaseio.com",
+      "service": "Findmykids",
+      "category": "parental-control",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "wondershare.cc",
+      "unicode_domain": "wondershare.cc",
+      "service": "FamiSafe",
+      "category": "parental-control",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "x3-report-uploads.s3.us-west-2.amazonaws.com",
+      "unicode_domain": "x3-report-uploads.s3.us-west-2.amazonaws.com",
+      "service": "GoGuardian",
+      "category": "monitoring",
+      "description": "Known patched/failsafe behavior; see README.",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "xnspy.com",
+      "unicode_domain": "xnspy.com",
+      "service": "General Parental Control",
+      "category": "parental-control",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "zscaler.com",
+      "unicode_domain": "zscaler.com",
+      "service": "Zscaler",
+      "category": "filtering",
+      "description": "",
+      "source": "",
+      "added": ""
+    },
+    {
+      "action": "block",
+      "domain": "zscalerone.net",
+      "unicode_domain": "zscalerone.net",
+      "service": "Zscaler",
+      "category": "filtering",
+      "description": "",
+      "source": "",
+      "added": ""
+    }
+  ]
+}

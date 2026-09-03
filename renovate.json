@@ -6,7 +6,8 @@
     ":semanticCommits"
   ],
   "enabledManagers": [
-    "github-actions"
+    "github-actions",
+    "pip_requirements"
   ],
   "dependencyDashboard": false,
   "packageRules": [

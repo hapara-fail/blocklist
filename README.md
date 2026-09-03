@@ -2,206 +2,154 @@
 
 [![jsDelivr](https://data.jsdelivr.com/v1/package/gh/hapara-fail/blocklist/badge)](https://www.jsdelivr.com/package/gh/hapara-fail/blocklist)
 
-**A unified blocklist for neutralizing surveillance and content filtering systems in managed network environments.**
+A community-maintained blocklist for school-mandated surveillance, filtering, device-management, and parental-control services. Review the [risk warning](#scope-and-safety) before deployment: blocking management infrastructure can disable browsing or other required device functions.
 
-This repository contains a comprehensive blocklist designed for seamless integration with modern network filtering and ad-blocking solutions. Its purpose is to inhibit the function of software commonly used for student monitoring, web censorship, and other forms of network-level restriction.
+`data/blocklist.csv` is the only source of truth. Everything in `dist/`, plus the legacy root `blocklist.txt`, is generated from it.
 
-**DNS with Blocklist:** **[www.hapara.fail/services/dns](https://www.hapara.fail/services/dns)**
+## Available formats
 
----
+| Format | File | Compatible software | Apex and subdomains | Direct jsDelivr link |
+| --- | --- | --- | --- | --- |
+| Adblock | [`dist/adblock.txt`](dist/adblock.txt) | uBlock Origin, Adblock Plus, AdGuard, AdGuard Home | Yes; browser products can differ for top-level document blocking | [Download](https://cdn.jsdelivr.net/gh/hapara-fail/blocklist@main/dist/adblock.txt) |
+| Domains | [`dist/domains.txt`](dist/domains.txt) | Pi-hole Gravity, Technitium block-list URLs, scripts and domain-list consumers | Exact entries; any expansion is consumer-specific | [Download](https://cdn.jsdelivr.net/gh/hapara-fail/blocklist@main/dist/domains.txt) |
+| Hosts | [`dist/hosts.txt`](dist/hosts.txt) | OS hosts files, AdAway, and hosts-file consumers | Exact hostnames only | [Download](https://cdn.jsdelivr.net/gh/hapara-fail/blocklist@main/dist/hosts.txt) |
+| dnsmasq | [`dist/dnsmasq.conf`](dist/dnsmasq.conf) | dnsmasq and systems that include dnsmasq configuration fragments | Yes; returns NXDOMAIN | [Download](https://cdn.jsdelivr.net/gh/hapara-fail/blocklist@main/dist/dnsmasq.conf) |
+| Unbound | [`dist/unbound.conf`](dist/unbound.conf) | Unbound and systems that accept Unbound include files | Yes; returns NXDOMAIN | [Download](https://cdn.jsdelivr.net/gh/hapara-fail/blocklist@main/dist/unbound.conf) |
+| RPZ | [`dist/blocklist.rpz`](dist/blocklist.rpz) | BIND 9, PowerDNS Recursor, and other RPZ-capable resolvers | Yes; explicit apex and wildcard triggers return NXDOMAIN | [Download](https://cdn.jsdelivr.net/gh/hapara-fail/blocklist@main/dist/blocklist.rpz) |
+| JSON | [`dist/blocklist.json`](dist/blocklist.json) | APIs, scripts, integrations, and hapara.fail | N/A; semantics are explicit in `action` | [Download](https://cdn.jsdelivr.net/gh/hapara-fail/blocklist@main/dist/blocklist.json) |
+| CSV | [`dist/blocklist.csv`](dist/blocklist.csv) | Spreadsheets, scripts, and data pipelines | N/A; semantics are explicit in `action` | [Download](https://cdn.jsdelivr.net/gh/hapara-fail/blocklist@main/dist/blocklist.csv) |
 
-## 🛡️ Objective
+The historical URL remains supported and is an exact copy of the Adblock export:
 
-The primary objective of this blocklist is to provide network administrators and users with a tool to disable the functionality of specific third-party services. It operates by blocking connections to domains essential to the operation of:
+```text
+https://cdn.jsdelivr.net/gh/hapara-fail/blocklist@main/blocklist.txt
+```
 
-- **Student Monitoring & Surveillance:** Applications that monitor user activity, capture screen content, and report on browsing habits.
-- **Web Censorship & Filtering:** Cloud-based and on-premise solutions that restrict access to websites and online resources.
-- **Device Management (MDM):** Infrastructure used to force-install applications and enforce restrictions on managed devices.
-- **Location Tracking:** Services used to track the physical location of users and devices.
+### Format semantics
 
----
+- Adblock `||example.com^` matches requests to the domain and its subdomains. The generated list retains `@@` allow rules. AdGuard browser products do not apply a plain domain rule to a top-level document in every context; DNS products interpret it at the hostname level.
+- A plain line or hosts entry represents only the hostname written. It cannot express the same subtree rule portably. Add an explicit subdomain row when exact-host consumers must block it.
+- Hosts uses `0.0.0.0`, the unspecified address. It avoids sending blocked traffic to a service on the local loopback address (`127.0.0.1`) and is widely used by maintained hosts lists. Some clients may require a different sink address.
+- dnsmasq uses `address=/example.com/` with an empty address. Current dnsmasq documents this as NXDOMAIN for the named domain and all subdomains.
+- Unbound uses `always_nxdomain` local zones. This returns NXDOMAIN for every name and record type within each listed zone, ignoring local data.
+- RPZ emits both `example.com CNAME .` and `*.example.com CNAME .`. RPZ wildcards do not include the apex, so both records are required. The SOA serial is the UTC build time as Unix epoch seconds.
+- DNS/hosts exports contain only `block` entries. They omit canonical `allow` entries because those formats have no portable exception mechanism.
 
-## ✨ Core Features
+No separate Pi-hole, AdGuard Home, Technitium, PowerDNS, OPNsense, or pfSense file is generated when one of the standard exports is already accepted. Use the format supported by the specific version and integration you run; appliance import screens may impose additional requirements.
 
-- **Focused Scope:** The list is curated to target domains directly associated with surveillance and filtering software, minimizing the potential for unintended service disruption.
-- **Adblock Plus Syntax:** Formatted using the `||domain.com^` syntax for compatibility with specific ad-blocking software, ensuring precise domain and subdomain blocking.
-- **Community-Maintained:** The blocklist is actively updated based on community-submitted intelligence and research to adapt to the changing domain infrastructure of targeted services.
-- **Privacy-Oriented:** Designed to restore user autonomy and enhance digital privacy by disabling intrusive network monitoring and location tracking.
+## Usage
 
----
+For uBlock Origin, Adblock Plus, AdGuard, or AdGuard Home, add the Adblock URL as a custom filter/blocklist. AdGuard Home documents the generated `||domain^` syntax directly, including subdomain and exception behavior.
 
-## ⚙️ Format & Compatibility
+For Pi-hole, add the Domains URL to **Adlists** and rebuild Gravity:
 
-This blocklist uses the **Adblock Plus (ABP) syntax** (`||domain.com^`). Due to this specific formatting, it is only compatible with software that can correctly parse this syntax.
+```sh
+pihole -g
+```
 
-#### ✅ Supported Software
+For a local hosts file, download `hosts.txt` and merge its entries into the platform's hosts file. Do not blindly replace an existing hosts file because it may contain required local mappings.
 
-This list should only be used with the following software:
+For dnsmasq, download `dnsmasq.conf`, include it from the main configuration, test it, and reload dnsmasq:
 
-- Pi-hole
-- AdGuard / AdGuard Home
-- eBlocker
-- uBlock Origin / AdNauseam
-- Brave (with Shields set to Aggressive)
-- Little Snitch Mini
+```text
+conf-file=/path/to/hapara-fail-dnsmasq.conf
+```
 
-#### ❌ Incompatible Software
+For Unbound, include the complete generated fragment at top level, then validate before reloading:
 
-The list is **not formatted for** the following software and is therefore incompatible:
+```text
+include: "/path/to/hapara-fail-unbound.conf"
+```
 
-- AdAway / adblock-lean
-- Bind / Blocky / Knot
-- Diversion
-- DNS66 / DNSCloak / DNSCrypt / DNSMasq / NextDNS
-- Hostfile-based blockers
-- InviZible Pro / Nebulo / PersonalDNSfilter
-- NetDuma / NetGuard / OPNsense / pfBlockerNG
-- OpenSnitch / PersonalBlocklist
-- PowerDNS / Technitium DNS / Unbound / YogaDNS
-- Response Policy Zone (RPZ)
-- uMatrix
+```sh
+unbound-checkconf
+```
 
----
+For BIND 9 RPZ, save the zone file locally and configure it as a primary policy zone. Adjust paths and access control for your environment:
 
-## 📥 Implementation Guide
+```text
+zone "rpz.hapara.fail" {
+    type primary;
+    file "/path/to/blocklist.rpz";
+    allow-query { none; };
+};
 
-Integration of the blocklist is a straightforward process for supported software.
+options {
+    response-policy { zone "rpz.hapara.fail"; };
+};
+```
 
-1.  **Copy the Raw Blocklist URL:**
+Validate it with `named-checkzone rpz.hapara.fail blocklist.rpz` before reloading BIND.
 
-    ```
-    https://cdn.jsdelivr.net/gh/hapara-fail/blocklist@main/blocklist.txt
-    ```
+## jsDelivr versioning
 
-2.  **Add the URL to your Blocking Solution:**
-    - **Pi-hole:** Navigate to `Group Management` > `Adlists` and add the URL as a new list source.
-    - **AdGuard Home:** Go to `Filters` > `DNS blocklists` and select "Add blocklist" to import the URL.
-    - **uBlock Origin / AdNauseam:** Open the dashboard, go to the "Filter lists" tab, scroll down to the "Custom" section, and paste the URL into the "Import" field. Then, click "Apply changes."
-    - **Other Systems:** Consult the official documentation for your software, ensuring it supports the Adblock Plus syntax for custom remote lists.
+The table uses `@main`, which follows accepted updates and is convenient for automatically refreshed blocklist subscriptions. jsDelivr caches branch URLs and this repository purges each published file after generated distributions change.
 
----
+For reproducible deployments, replace `@main` with a release tag (for example, `@v1.0.0`) or a full commit hash. Tags provide readable, immutable releases; commit hashes pin the exact content. A moving branch is the easiest to maintain but can change without local review. jsDelivr documents long-lived caching for static versions and shorter caching for branches in its [official usage documentation](https://github.com/jsdelivr/jsdelivr#github).
 
-## 👁️ Services Targeted
+## Contributing
 
-The blocklist is organized by service category for transparency. It currently includes domains related to the following platforms:
+Contributors edit only [`data/blocklist.csv`](data/blocklist.csv). Do not manually edit `dist/` or `blocklist.txt`; the main-branch workflow regenerates and commits them after validation succeeds.
 
-#### Monitoring & Classroom Management
+Each row has these columns:
 
-- Hapara
-- GoGuardian
-- LanSchool
-- Bark
-- Gaggle
-- Blocksi
-- AristotleK12
-- NetRef
-- NetSupport
-- DyKnow
-- Impero
-- Senso
-- Faronics Insight
-- Pulse / EducatorImpact
-- LearnSafe
+| Column | Required | Meaning |
+| --- | --- | --- |
+| `action` | Yes | `block` or `allow`; use `allow` only for an intentional Adblock exception |
+| `domain` | Yes | A hostname without scheme, path, port, wildcard, leading dot, or trailing root dot |
+| `service` | Yes | Human-readable product or vendor name |
+| `category` | Yes | `monitoring`, `filtering`, `device-management`, `parental-control`, or `other` |
+| `description` | No | Short reason/context, especially for unusual or risky entries |
+| `source` | No | Absolute HTTP(S) evidence or provenance URL |
+| `added` | No | Known addition date in `YYYY-MM-DD` form |
 
-#### Content Filtering & Security
+Example:
 
-- Lightspeed Systems
-- Securly
-- iboss
-- Fortinet / FortiGuard
-- Zscaler
-- Linewize / Qoria / FamilyZone
-- Content Keeper
-- Smoothwall
-- Sophos
-- Netsweeper
-- Deledao
-- ManagedMethods
+```csv
+block,telemetry.example,Example Classroom,monitoring,Telemetry endpoint,https://example.org/evidence,2026-09-03
+```
 
-#### Device Management (MDM) & Infrastructure
+The generator applies UTS #46 compatibility processing and IDNA 2008 validation, emits lowercase ASCII/Punycode network names, rejects invalid metadata and normalized duplicates, and sorts every output deterministically. Lines whose first field starts with `#` and blank lines are ignored as canonical comments.
 
-- Jamf
-- Mosyle
-- Gopher
-- LGFL
-- Mobile Guardian
-- Radix VISO
+To validate and test locally:
 
-#### Parental Control & Location Tracking
+```sh
+python -m pip install -r requirements.txt
+python scripts/generate_blocklist.py --validate-only
+python -m unittest discover -s scripts -p "test_*.py" -v
+```
 
-- Life360
-- Qustodio
-- Google Family Link
-- Kiddoware
-- Findmykids
-- Troomi
-- Microsoft Family Safety
-- mSpy
-- Net Nanny
-- FamiSafe
-- SpyHuman
-- Mobicip
-- Kidlogger
-- Screen Time Labs
-- OurPact
-- Kidslox
-- Boomerang
-- MMGuardian
-- WebWatcher
-- ClevGuard / KidsGuard
-- FlexiSPY
-- Spyrix
-- Hoverwatch
-- uMobix
-- XNSPY
-- Circle
-- Accountable2You
-- Geozilla
-- FamilyOrbit
-- Truple
-- Kidgy
-- SeekDroid
-- LockItTight
-- SafeNet
-- Discovenger
-- Eyezy
-- Canopy
+Maintainers can regenerate the committed files with:
 
-#### Known Patched Systems
+```sh
+python scripts/generate_blocklist.py
+```
 
-The following systems have implemented hardcoded failsafes. **Blocking these domains will result in a total loss of web browsing capabilities** rather than a successful bypass, as they sever the internet connection when server communication fails.
+Set `SOURCE_DATE_EPOCH` or pass an ISO 8601 `--timestamp` for reproducible metadata. The generated JSON contract is versioned as `1.0.0` and formally defined in [`schemas/blocklist.schema.json`](schemas/blocklist.schema.json). A schema-version change is required for breaking field or semantic changes.
 
-Patch status can vary by deployment. A system listed here may not be patched for every user because of staged rollouts, A/B testing, or administrator opt-in features. There may also be patched systems we have not identified yet; if you encounter one, please [report it](https://github.com/hapara-fail/blocklist/issues/new?template=patched.yml).
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the pull-request workflow and evidence guidelines.
 
-- GoGuardian
-- Lightspeed Systems
-- Securly
+## Authoritative format references
 
----
+- [Adblock Plus filter syntax and special comments](https://help.adblockplus.org/adblock-plus-help-center/how-to-write-filters)
+- [AdGuard filtering-rule syntax](https://adguard.com/kb/general/ad-filtering/create-own-filters/)
+- [AdGuard Home DNS blocklist syntax](https://github.com/AdguardTeam/AdGuardHome/wiki/Hosts-Blocklists)
+- [uBlock Origin static filter syntax](https://github.com/gorhill/uBlock/wiki/Static-filter-syntax)
+- [Linux `hosts(5)` format](https://man7.org/linux/man-pages/man5/hosts.5.html)
+- [dnsmasq current manual](https://thekelleys.org.uk/dnsmasq/docs/dnsmasq-man.html)
+- [Unbound `local-zone` configuration](https://unbound.docs.nlnetlabs.nl/en/latest/manpages/unbound.conf.html)
+- [BIND 9 RPZ reference and examples](https://bind9.readthedocs.io/en/stable/reference.html#response-policy-zone-rpz-rewriting)
+- [PowerDNS Recursor RPZ support](https://docs.powerdns.com/recursor/lua-config/rpz.html)
+- [Pi-hole Gravity behavior](https://docs.pi-hole.net/main/pihole-command/#gravity)
+- [Technitium DNS block-list URLs](https://technitium.com/dns/)
+- [IDNA 2008 and UTS #46 implementation](https://pypi.org/project/idna/)
 
-## ⚠️ Disclaimer
+## Scope and safety
 
-- **Potential for Overblocking:** While the list is curated for precision, the use of wildcard domains or the blocking of shared infrastructure could disrupt legitimate services. **Thorough testing is strongly recommended** in a controlled environment before widespread deployment.
-- **Effectiveness is Not Guaranteed:** The efficacy of this blocklist is contingent on the specific network architecture and filtering methods in place. It may not bypass all restrictive measures.
-- **Service Infrastructure:** Targeted services frequently update their domains and hosting infrastructure. Continuous maintenance of this list is required for it to remain effective.
-- **Responsible Use:** This blocklist is provided for informational purposes. Users are solely responsible for ensuring their use of this tool complies with all applicable acceptable use policies and local regulations.
+Several targeted products can fail closed: if their infrastructure is unreachable, they may intentionally disable all browsing. GoGuardian, Lightspeed Systems, and Securly have been reported with such behavior, but it can vary by product version and deployment. Test in a controlled environment, expect false positives or shared-infrastructure impact, and comply with applicable policies and law. This list does not guarantee that a product will be bypassed or disabled.
 
----
+Report additions, false positives, or patched/failsafe behavior with the repository's issue templates. Community discussion is also available through the [hapara.fail Discord](https://www.hapara.fail/discord).
 
-## 🤝 Contributing
+## License
 
-Contributions are welcome! To ensure changes are processed quickly and correctly, please review our **[Contributing Guidelines](CONTRIBUTING.md)** before submitting.
-
-If you have ideas for improvements, new tools, bug fixes, or blog post topics, please feel free to:
-
-- **Open an Issue** on GitHub using our standardized templates.
-- **Submit a Pull Request** with your proposed changes.
-- Join our [Discord server](https://www.hapara.fail/discord) to discuss.
-
-You can also find donation options [here](https://www.hapara.fail/contribute).
-
----
-
-## 📄 License
-
-This project is licensed under the terms specified at [www.hapara.fail/license](https://www.hapara.fail/license).
+This project is licensed under [GPL-3.0-only](LICENSE).

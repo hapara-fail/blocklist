@@ -1,11 +1,11 @@
-name: Purge Cache
+name: Purge jsDelivr cache
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
     paths:
       - "blocklist.txt"
+      - "dist/**"
       - "README.md"
 
 permissions:
@@ -14,24 +14,24 @@ permissions:
 jobs:
   purge:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Purge blocklist cache
+      - name: Purge published files
         shell: bash
         run: |
-          echo "::group::Purge blocklist cache"
-          url="https://purge.jsdelivr.net/gh/hapara-fail/blocklist@main/blocklist.txt"
-          echo "Purging ${url}"
-          curl --fail --show-error --silent --output /dev/null "${url}"
-          echo "Blocklist cache purge completed."
-          echo "::endgroup::"
-
-      - name: Purge README cache
-        shell: bash
-        run: |
-          echo "::group::Purge README cache"
-          url="https://purge.jsdelivr.net/gh/hapara-fail/blocklist@main/README.md"
-          echo "Purging ${url}"
-          curl --fail --show-error --silent --output /dev/null "${url}"
-          echo "README cache purge completed."
-          echo "::endgroup::"
+          files=(
+            blocklist.txt
+            dist/adblock.txt
+            dist/domains.txt
+            dist/hosts.txt
+            dist/dnsmasq.conf
+            dist/unbound.conf
+            dist/blocklist.rpz
+            dist/blocklist.json
+            dist/blocklist.csv
+            README.md
+          )
+          for file in "${files[@]}"; do
+            url="https://purge.jsdelivr.net/gh/hapara-fail/blocklist@main/${file}"
+            echo "Purging ${url}"
+            curl --fail --show-error --silent --output /dev/null "$url"
+          done

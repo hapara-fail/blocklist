@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/hapara-fail/blocklist/blob/main/schemas/blocklist.schema.json",
+  "title": "hapara.fail generated blocklist",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "list_version",
+    "generated_at",
+    "update_interval_hours",
+    "project",
+    "entry_count",
+    "block_entry_count",
+    "allow_entry_count",
+    "entries"
+  ],
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "list_version": { "type": "string", "pattern": "^[0-9]{12}$" },
+    "generated_at": { "type": "string", "format": "date-time" },
+    "update_interval_hours": { "type": "integer", "minimum": 1 },
+    "project": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "homepage", "repository", "license", "license_url", "description"],
+      "properties": {
+        "name": { "type": "string" },
+        "homepage": { "type": "string", "format": "uri" },
+        "repository": { "type": "string", "format": "uri" },
+        "license": { "const": "GPL-3.0-only" },
+        "license_url": { "type": "string", "format": "uri" },
+        "description": { "type": "string" }
+      }
+    },
+    "entry_count": { "type": "integer", "minimum": 0 },
+    "block_entry_count": { "type": "integer", "minimum": 0 },
+    "allow_entry_count": { "type": "integer", "minimum": 0 },
+    "entries": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/entry" }
+    }
+  },
+  "$defs": {
+    "entry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["action", "domain", "unicode_domain", "service", "category", "description", "source", "added"],
+      "properties": {
+        "action": { "enum": ["allow", "block"] },
+        "domain": {
+          "type": "string",
+          "pattern": "^(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?$",
+          "maxLength": 253,
+          "description": "Normalized lowercase IDNA ASCII hostname."
+        },
+        "unicode_domain": {
+          "type": "string",
+          "description": "Normalized Unicode display form of the hostname."
+        },
+        "service": { "type": "string", "minLength": 1 },
+        "category": {
+          "enum": ["monitoring", "filtering", "device-management", "parental-control", "other"]
+        },
+        "description": { "type": "string" },
+        "source": {
+          "anyOf": [
+            { "const": "" },
+            { "type": "string", "format": "uri", "pattern": "^https?://" }
+          ]
+        },
+        "added": {
+          "anyOf": [
+            { "const": "" },
+            { "type": "string", "format": "date" }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,38 +1,23 @@
-# Pull Request (Blocklist)
+# Blocklist pull request
 
-**1. Type of Change:**
-_What does this PR do? (Check one)_
+## Change
 
-- [ ] **Add** new domains to the blocklist
-- [ ] **Remove** domains (False Positive fix)
-- [ ] **Documentation** / Maintenance update
+- [ ] Add domains
+- [ ] Remove or correct domains
+- [ ] Generator, tests, CI, or documentation
 
-**2. Related Issue:**
-_Does this fix an existing issue? Please link it here (e.g., "Closes #12")._
+Related issue:
 
->
+Summary and evidence:
 
-**3. Summary of Changes:**
-_Briefly explain what you changed and why. (e.g., "Added 10 new telemetry domains for GoGuardian," "Removed canvas.instructure.com because it broke logins")_
+## Verification
 
->
+- [ ] I edited `data/blocklist.csv` for entry changes.
+- [ ] I did not manually edit `dist/` or `blocklist.txt`.
+- [ ] Each changed row has a valid action, hostname, service, and category.
+- [ ] I checked for shared-infrastructure or false-positive risk.
+- [ ] I ran `python scripts/generate_blocklist.py --validate-only`.
+- [ ] I ran `python -m unittest discover -s scripts -p "test_*.py" -v`.
+- [ ] For removals, I confirmed that removing the entry restores the affected service.
 
-**4. Verification & Testing:**
-_How did you verify these changes?_
-
-- [ ] I have verified that these domains belong to the target service.
-- [ ] I have checked that the Adblock Plus syntax (`||domain.com^`) is correct.
-- [ ] (If removing) I confirmed that unblocking this restores the broken functionality.
-
-**5. Placement:**
-_Where did you put the new domains?_
-
-- [ ] Under the correct Vendor Header (e.g., `! Lightspeed`).
-- [ ] Created a new header for a new service.
-
----
-
-**Final Checklist:**
-
-- [ ] I have read the [Contributing Guidelines](https://github.com/hapara-fail/blocklist/blob/main/CONTRIBUTING.md).
-- [ ] There are no trailing spaces or inline comments in the blocklist file.
+By submitting this pull request, I agree to the [contribution guidelines](../CONTRIBUTING.md), [Code of Conduct](../CODE_OF_CONDUCT.md), and repository license.

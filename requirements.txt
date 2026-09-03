@@ -1,0 +1,2 @@
+idna==3.19
+jsonschema==4.26.0
